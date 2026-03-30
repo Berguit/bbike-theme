@@ -1,0 +1,74 @@
+parent: classic
+name: bbike
+display_name: BBike Belleville
+version: 1.0.0
+author:
+  name: "BBike"
+  email: "contact@bbikebelleville.com"
+  url: "https://bbikebelleville.com"
+
+meta:
+  compatibility:
+    from: 8.1.0
+    to: ~
+
+  available_layouts:
+    layout-full-width:
+      name: Full Width
+      description: No side columns, ideal for distraction-free pages such as product pages.
+    layout-both-columns:
+      name: Three Columns
+      description: One large central column and 2 side columns.
+    layout-left-column:
+      name: Two Columns, small left column
+      description: Two columns with a small left column
+    layout-right-column:
+      name: Two Columns, small right column
+      description: Two columns with a small right column
+
+assets:
+  use_parent_assets: true
+  css:
+    all:
+      - id: bbike-custom
+        path: assets/css/custom.css
+        priority: 300
+  js:
+    all:
+      - id: bbike-custom-js
+        path: assets/js/custom.js
+        priority: 300
+
+global_settings:
+  configuration:
+    PS_IMAGE_QUALITY: png
+  modules:
+    to_enable:
+      - ps_linklist
+  hooks:
+    modules_to_hook:
+      displayAfterBodyOpeningTag:
+        - blockreassurance
+      displayNavFullWidth:
+        - blockreassurance
+      displayNav1:
+        - ps_contactinfo
+      displayNav2:
+        - ps_languageselector
+        - ps_currencyselector
+        - ps_customersignin
+        - ps_shoppingcart
+      displayTop:
+        - ps_mainmenu
+        - ps_searchbar
+      displayHome:
+        - ps_imageslider
+        - ps_featuredproducts
+        - ps_newproducts
+        - ps_bestsellers
+        - ps_banner
+      displayFooter:
+        - ps_linklist
+        - ps_contactinfo
+      displayFooterAfter:
+        - ps_socialfollow
