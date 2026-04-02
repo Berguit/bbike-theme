@@ -21,7 +21,7 @@
           </div>
         </div>
         <div class="col-md-7 right-nav d-flex justify-content-end align-items-center">
-            {hook h='displayNav2'}
+            {* displayNav2 moved to header_top to avoid duplicate search/icons *}
         </div>
         <div class="hidden-md-up text-sm-center mobile">
           <div class="float-xs-left" id="menu-icon">
@@ -54,18 +54,17 @@
             </a>
           {/if}
         </div>
-        <div class="header-top-right col-md-10 d-flex justify-content-between align-items-center position-static">
-          <div class="col-md-7 col-xs-12" id="_desktop_search">
-            {hook h='displaySearch'}
-          </div>
-          <div class="col-md-5 d-flex justify-content-end align-items-center">
-            {hook h='displayTop'}
-          </div>
+        <div class="col-md-6 col-xs-12" id="_desktop_search">
+          {hook h='displaySearch'}
+        </div>
+        <div class="col-md-4 d-flex justify-content-end align-items-center">
+          {hook h='displayNav2'}
         </div>
       </div>
     </div>
     <div class="menu-container">
       <div class="container">
+        {hook h='displayTop'}
         {hook h='displayNavFullWidth'}
         <div id="mobile_top_menu_wrapper" class="row hidden-md-up" style="display:none;">
           <div class="js-top-menu mobile" id="_mobile_top_menu"></div>

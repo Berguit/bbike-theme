@@ -30,12 +30,12 @@ assets:
   use_parent_assets: true
   css:
     all:
-      - id: bbike-custom
-        path: assets/css/custom.css
+      - id: bbike-theme
+        path: assets/css/bbike.css
         priority: 300
   js:
     all:
-      - id: bbike-custom-js
+      - id: bbike-theme-js
         path: assets/js/custom.js
         priority: 300
 
@@ -60,7 +60,10 @@ global_settings:
         - ps_shoppingcart
       displayTop:
         - ps_mainmenu
+      displaySearch:
         - ps_searchbar
+      displayHomeSlider:
+        - ps_imageslider
       displayHome:
         - ps_imageslider
         - ps_featuredproducts

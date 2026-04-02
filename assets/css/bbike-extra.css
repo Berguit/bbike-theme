@@ -1,0 +1,751 @@
+/* BBike Extra CSS - Filters, Sidebar, QuickView */
+
+/* Sidebar filters */
+body #search_filters ul.faceted-slider.collapse, body #search_filters .facet ul.faceted-slider { background: none !important; background-color: transparent !important; border: none !important; height: auto !important; padding: 0 !important; overflow: visible !important; margin: 10px 8px !important; }
+body #search_filters .ui-slider.ui-widget-content { background: #E8E9ED !important; border: none !important; height: 4px !important; border-radius: 2px !important; }
+#search_filters .facet .faceted-slider .ui-slider-range { background: #071D49 !important; height: 4px !important; border-radius: 2px !important; }
+#search_filters .facet .faceted-slider .ui-slider-handle { background: #071D49 !important; border: 3px solid #fff !important; border-radius: 50% !important; width: 18px !important; height: 18px !important; top: -7px !important; cursor: pointer !important; box-shadow: 0 1px 4px rgba(0,0,0,0.2) !important; outline: none !important; }
+#search_filters .facet .faceted-slider .ui-slider-handle:hover { background: #FDAF4E !important; }
+#search_filters .facet-title { font-size: 14px !important; font-weight: 700 !important; color: #071D49 !important; text-transform: uppercase !important; letter-spacing: 0.5px !important; padding-bottom: 6px !important; margin-bottom: 6px !important; border-bottom: 2px solid #071D49 !important; }
+#left-column .block-categories { display: none !important; }
+#search_filters .facet { margin-bottom: 16px !important; padding-bottom: 12px !important; border-bottom: 1px solid #eee !important; }
+#search_filters .facet:last-child { border-bottom: none !important; }
+#search_filters .facet .facet-label { font-size: 13px !important; color: #333 !important; padding: 3px 0 !important; }
+#search_filters .facet .custom-checkbox input[type='checkbox'] + span { border-color: #071D49 !important; border-radius: 3px !important; }
+#search_filters .facet .custom-checkbox input[type='checkbox']:checked + span { background: #071D49 !important; }
+#search_filters .facet p { font-size: 15px !important; font-weight: 700 !important; color: #071D49 !important; margin: 0 0 4px 0 !important; }
+
+/* Active filters */
+#js-active-search-filters { background: #fff !important; padding: 0 !important; margin-bottom: 10px !important; }
+#js-active-search-filters .active-filter-title { display: inline !important; font-size: 14px !important; font-weight: 700 !important; color: #071D49 !important; margin-right: 8px !important; vertical-align: middle !important; }
+#js-active-search-filters ul { display: inline-flex !important; flex-wrap: wrap !important; gap: 6px !important; list-style: none !important; padding: 0 !important; margin: 0 !important; vertical-align: middle !important; }
+#js-active-search-filters .filter-block { display: inline-flex !important; align-items: center !important; padding: 5px 12px !important; background: #f5f5f5 !important; border: 1px solid #e0e0e0 !important; border-radius: 20px !important; font-size: 13px !important; font-weight: 600 !important; color: #333 !important; }
+#js-active-search-filters .filter-block:hover { background: #FFE1E1 !important; border-color: #FF4026 !important; }
+#js-active-search-filters .filter-block a { display: inline-flex !important; align-items: center !important; text-decoration: none !important; margin-left: 4px !important; }
+#js-active-search-filters .filter-block .material-icons { font-size: 16px !important; color: #FDAF4E !important; }
+#js-active-search-filters .filter-block:hover .material-icons { color: #FF4026 !important; }
+#js-active-search-filters .bbike-clear-all { font-size: 13px !important; color: #333 !important; text-decoration: underline !important; margin-left: 10px !important; vertical-align: middle !important; }
+#js-active-search-filters .bbike-clear-all:hover { color: #FF4026 !important; }
+
+/* Category header */
+.bbike-category-header { margin-bottom: 16px; }
+.bbike-category-header h1 { font-size: 28px; font-weight: 900; color: #071D49; text-transform: uppercase; margin: 0 0 10px 0; padding: 0; }
+.bbike-category-desc { font-size: 14px; line-height: 1.6; color: #555; max-width: 650px; margin-bottom: 16px; }
+.bbike-category-desc p { margin: 0 0 8px 0; }
+.bbike-category-desc strong { color: #071D49; }
+.bbike-subcategories { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.bbike-subcategory-pill { display: inline-flex; align-items: center; gap: 4px; padding: 8px 16px; border: 1px solid #ddd; border-radius: 6px; font-size: 13px; font-weight: 600; color: #071D49; text-decoration: none; transition: all 0.2s ease; background: #fff; }
+.bbike-subcategory-pill:hover { border-color: #FDAF4E; color: #FDAF4E; text-decoration: none; }
+.bbike-subcategory-pill .material-icons { font-size: 16px; color: #FDAF4E; }
+
+/* SEO content bottom */
+.bbike-seo-content { padding: 30px 0; margin-top: 20px; border-top: 1px solid #eee; font-size: 14px; line-height: 1.7; color: #555; }
+.bbike-seo-content h2, .bbike-seo-content h3 { font-size: 20px; font-weight: 700; color: #071D49; margin: 20px 0 10px 0; }
+.bbike-seo-content h2:first-child, .bbike-seo-content h3:first-child { margin-top: 0; }
+.bbike-seo-content p { margin: 0 0 12px 0; }
+.bbike-seo-content strong { color: #071D49; }
+.bbike-seo-content a { color: #FDAF4E; text-decoration: underline; }
+
+/* QuickView modal Fitadium style */
+.bbike-quickview { border-radius: 12px !important; overflow: hidden; position: relative; }
+.bbike-quickview .modal-header, .bbike-quickview .modal-footer { display: none !important; }
+.bbike-quickview .modal-dialog { max-width: 700px !important; }
+.bbike-qv-close { position: absolute !important; top: 10px; right: 10px; z-index: 10; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: #f5f5f5; border-radius: 50%; border: none; cursor: pointer; }
+.bbike-qv-close .material-icons { font-size: 18px; color: #333; }
+.bbike-qv-close:hover { background: #eee; }
+.bbike-qv-layout { display: flex !important; }
+.bbike-qv-left { flex: 0 0 50%; max-width: 50%; background: #fff; display: flex; align-items: center; justify-content: center; padding: 20px; }
+.bbike-qv-left picture { width: 100%; }
+.bbike-qv-left img { width: 100%; height: auto; display: block; }
+.bbike-qv-right { flex: 0 0 50%; max-width: 50%; padding: 24px 24px 24px 16px; display: flex; flex-direction: column; }
+.bbike-qv-brand { display: block; font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; margin-bottom: 2px; }
+.bbike-qv-name { font-size: 17px !important; font-weight: 700 !important; color: #071D49 !important; margin: 0 0 12px 0 !important; line-height: 1.3 !important; }
+.bbike-quickview .product-variants { margin-bottom: 8px; }
+.bbike-quickview .product-variants-item { margin-bottom: 8px; }
+.bbike-quickview .product-variants-item .control-label { display: block; font-size: 12px; font-weight: 700; color: #071D49; margin-bottom: 3px; }
+.bbike-quickview .product-variants-item select { width: 100%; padding: 8px 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 13px; color: #333; background: #fff; appearance: auto; }
+.bbike-qv-stock { margin-bottom: 10px; }
+.bbike-qv-stock span { display: inline-flex; align-items: center; gap: 4px; font-size: 13px; font-weight: 600; }
+.bbike-qv-stock .stock-ok { color: #4CAF50; }
+.bbike-qv-stock .stock-low { color: #FF9800; }
+.bbike-qv-stock .stock-out { color: #FF4026; }
+.bbike-qv-stock .material-icons { font-size: 16px; }
+.bbike-qv-price-qty { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+.bbike-qv-price { flex: 1; }
+.bbike-qv-price .old-price { text-decoration: line-through; color: #999; font-size: 13px; margin-right: 4px; }
+.bbike-qv-price .discount-badge { display: inline-block; background: #FF4026; color: #fff; font-size: 10px; font-weight: 700; padding: 1px 5px; border-radius: 3px; }
+.bbike-qv-price .current-price { display: block; font-size: 22px; font-weight: 800; color: #071D49; margin-top: 2px; }
+.bbike-qv-price .current-price.has-discount { color: #FF4026; }
+.bbike-qv-qty { flex-shrink: 0; }
+.qty-selector { display: flex; align-items: center; border: 1px solid #ddd; border-radius: 4px; overflow: hidden; }
+.qty-btn { width: 36px; height: 38px; display: flex; align-items: center; justify-content: center; background: #fff; border: none; cursor: pointer; font-size: 18px; font-weight: 600; color: #333; transition: background 0.2s; }
+.qty-btn:hover { background: #f5f5f5; }
+.qty-input { width: 44px; height: 38px; border: none; border-left: 1px solid #ddd; border-right: 1px solid #ddd; text-align: center; font-size: 15px; font-weight: 600; color: #071D49; -moz-appearance: textfield; }
+.qty-input::-webkit-outer-spin-button, .qty-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+
+
+
+.bbike-qv-link { display: block; text-align: center; margin-top: 12px; font-size: 13px; color: #FDAF4E; font-weight: 700; text-decoration: none; }
+.bbike-qv-link:hover { color: #071D49; text-decoration: underline; }
+.bbike-quickview .product-add-to-cart, .bbike-quickview #product-description-short, .bbike-quickview .product-prices, .bbike-quickview .product-additional-info { display: none !important; }
+
+/* Hide bootstrap-touchspin injected elements in quickview */
+.bbike-quickview .bootstrap-touchspin { display: none !important; }
+.bbike-quickview .bootstrap-touchspin-injected { display: none !important; }
+.bbike-quickview .input-group-btn { display: none !important; }
+.bbike-quickview .bootstrap-touchspin-down, .bbike-quickview .bootstrap-touchspin-up { display: none !important; }
+.bbike-quickview .js-touchspin.bootstrap-touchspin-down, .bbike-quickview .js-touchspin.bootstrap-touchspin-up { display: none !important; }
+.bbike-quickview .qty-selector { display: flex !important; }
+.bbike-quickview .qty-selector .qty-btn { display: flex !important; }
+.bbike-quickview .qty-selector .qty-input { display: block !important; }
+
+
+
+/* Cart button - beats button.btn-primary */
+.bbike-quickview .bbike-qv-cart-btn,
+.bbike-quickview button.bbike-qv-cart-btn,
+.bbike-quickview button.btn.btn-primary.add-to-cart.bbike-qv-cart-btn,
+.modal .bbike-qv-cart-btn {
+  display: block !important;
+  width: 100% !important;
+  padding: 16px 20px !important;
+  background: linear-gradient(180deg, #FDD76E 0%, #FDAF4E 100%) !important;
+  color: #071D49 !important;
+  border: none !important;
+  border-radius: 6px !important;
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  cursor: pointer !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  text-align: center !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 3px 10px rgba(253,175,78,0.35) !important;
+}
+.bbike-quickview .bbike-qv-cart-btn:hover,
+.bbike-quickview button.bbike-qv-cart-btn:hover,
+.modal .bbike-qv-cart-btn:hover {
+  background: linear-gradient(180deg, #FDCB6E 0%, #E89A35 100%) !important;
+  box-shadow: 0 5px 15px rgba(253,175,78,0.5) !important;
+  transform: translateY(-1px) !important;
+}
+.bbike-quickview .bbike-qv-cart-btn:disabled,
+.modal .bbike-qv-cart-btn:disabled {
+  background: #ddd !important;
+  color: #999 !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+
+/* ============================================================
+   PRODUCT PAGE - 3 Column Fitadium Layout
+   ============================================================ */
+
+/* --- Top 3-column flex --- */
+.bbike-product-page { max-width: 1200px; margin: 0 auto; padding: 20px 15px; }
+.bbike-product-top { display: flex; gap: 24px; margin-bottom: 30px; align-items: flex-start; }
+.bbike-product-images { flex: 0 0 35%; max-width: 35%; position: relative; }
+.bbike-product-info { flex: 0 0 35%; max-width: 35%; }
+.bbike-product-buy { flex: 0 0 30%; max-width: 30%; background: #f8f9fa; border-radius: 8px; padding: 20px; position: sticky; top: 20px; }
+
+/* --- Images column --- */
+.bbike-product-images .product-cover img { width: 100%; height: auto; background: #fff; border-radius: 6px; }
+.bbike-product-images .product-flags { position: absolute; top: 10px; left: 10px; z-index: 2; }
+.bbike-product-images .product-flag { display: inline-block; padding: 4px 10px; font-size: 11px; font-weight: 700; text-transform: uppercase; border-radius: 3px; margin-bottom: 4px; }
+.bbike-product-images .product-thumbnails { margin-top: 10px; }
+.bbike-product-images .product-thumbnails .thumb-container { display: inline-block; width: 60px; height: 60px; margin-right: 6px; border: 2px solid transparent; border-radius: 4px; overflow: hidden; cursor: pointer; transition: border-color 0.2s; }
+.bbike-product-images .product-thumbnails .thumb-container:hover,
+.bbike-product-images .product-thumbnails .thumb-container.selected { border-color: #FDAF4E; }
+.bbike-product-images .product-thumbnails img { width: 100%; height: 100%; object-fit: cover; }
+.bbike-product-images .scroll-box-arrows { display: none; }
+
+/* --- Info column --- */
+.bbike-pi-brand { margin-bottom: 4px; }
+.bbike-pi-brand a { font-size: 13px; color: #999; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; text-decoration: none; }
+.bbike-pi-brand a:hover { color: #FDAF4E; }
+.bbike-pi-name { font-size: 24px !important; font-weight: 800 !important; color: #071D49 !important; margin: 0 0 12px 0 !important; line-height: 1.3 !important; }
+.bbike-pi-short-desc { font-size: 14px; line-height: 1.7; color: #555; margin-bottom: 16px; }
+.bbike-pi-short-desc p { margin: 0 0 8px 0; }
+
+/* Long description encart */
+.bbike-pi-long-desc { background: #f8f9fa; border-radius: 8px; padding: 20px; margin-top: 20px; }
+.bbike-pi-long-title { font-size: 16px; font-weight: 700; color: #071D49; margin: 0 0 12px 0; text-transform: uppercase; }
+.bbike-pi-long-body { font-size: 14px; line-height: 1.7; color: #555; }
+.bbike-pi-long-body p { margin: 0 0 10px 0; }
+.bbike-pi-long-body h2, .bbike-pi-long-body h3 { font-size: 15px; font-weight: 700; color: #071D49; margin: 14px 0 8px 0; }
+
+/* Product details in info column */
+.bbike-product-info .product-details { margin-top: 16px; font-size: 13px; }
+.bbike-product-info .product-features { margin-top: 10px; }
+
+/* Reviews hook */
+.bbike-product-info .grade-stars { margin-bottom: 12px; }
+
+/* --- Buy box --- */
+.bbike-product-buy .product-variants { margin-bottom: 14px; }
+.bbike-product-buy .product-variants .product-variants-item { margin-bottom: 10px; }
+.bbike-product-buy .product-variants .control-label { display: block; font-size: 12px; font-weight: 700; color: #071D49; margin-bottom: 4px; text-transform: uppercase; }
+.bbike-product-buy .product-variants select { width: 100%; padding: 8px 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 13px; color: #333; background: #fff; }
+
+/* Stock */
+.bbike-buy-stock { margin-bottom: 12px; }
+.bbike-buy-stock span { display: inline-flex; align-items: center; gap: 4px; font-size: 13px; font-weight: 600; }
+.bbike-buy-stock .stock-ok { color: #4CAF50; }
+.bbike-buy-stock .stock-low { color: #FF9800; }
+.bbike-buy-stock .stock-out { color: #F44336; }
+.bbike-buy-stock .material-icons { font-size: 16px; }
+
+/* Prices in buy box */
+.bbike-product-buy .product-prices { margin-bottom: 14px; }
+.bbike-product-buy .product-prices .current-price-value,
+.bbike-product-buy .current-price span:first-child { font-size: 28px !important; font-weight: 800 !important; color: #071D49 !important; }
+.bbike-product-buy .product-prices .current-price-value.has-discount,
+.bbike-product-buy .has-discount .current-price-value { color: #FF4026 !important; }
+.bbike-product-buy .product-prices .regular-price { text-decoration: line-through; color: #999; font-size: 14px; margin-right: 6px; }
+.bbike-product-buy .product-discount .discount { display: inline-block; background: #FF4026; color: #fff; font-size: 11px; font-weight: 700; padding: 2px 6px; border-radius: 3px; }
+.bbike-product-buy .tax-shipping-delivery-label { font-size: 11px; color: #999; margin-top: 2px; }
+
+/* Quantity selector in buy box */
+.bbike-product-buy .product-quantity { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
+.bbike-product-buy .product-quantity .qty { display: flex; align-items: center; }
+
+/* Override bootstrap-touchspin to use our qty-selector style */
+.bbike-product-buy .bootstrap-touchspin { display: none !important; }
+.bbike-product-buy .bootstrap-touchspin-injected { display: none !important; }
+.bbike-product-buy .input-group-btn { display: none !important; }
+.bbike-product-buy .js-touchspin { display: none !important; }
+
+/* Add to Cart button */
+.bbike-product-buy .add-to-cart,
+.bbike-product-buy button.btn.btn-primary.add-to-cart {
+  display: block !important;
+  width: 100% !important;
+  padding: 16px 20px !important;
+  background: linear-gradient(180deg, #FDD76E 0%, #FDAF4E 100%) !important;
+  color: #071D49 !important;
+  border: none !important;
+  border-radius: 6px !important;
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  cursor: pointer !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  text-align: center !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 3px 10px rgba(253,175,78,0.35) !important;
+}
+.bbike-product-buy .add-to-cart:hover,
+.bbike-product-buy button.btn.btn-primary.add-to-cart:hover {
+  background: linear-gradient(180deg, #FDCB6E 0%, #E89A35 100%) !important;
+  box-shadow: 0 5px 15px rgba(253,175,78,0.5) !important;
+  transform: translateY(-1px) !important;
+}
+.bbike-product-buy .add-to-cart:disabled {
+  background: #ddd !important;
+  color: #999 !important;
+  box-shadow: none !important;
+  transform: none !important;
+  cursor: not-allowed !important;
+}
+
+/* Reassurance */
+.bbike-buy-reassurance { margin-top: 20px; padding-top: 16px; border-top: 1px solid #e9ecef; }
+.bbike-reassurance-item { display: flex; align-items: center; gap: 8px; padding: 6px 0; font-size: 13px; color: #555; font-weight: 500; }
+.bbike-reassurance-item .material-icons { font-size: 18px; color: #4CAF50; }
+
+/* Hide native reassurance block duplicate if module active */
+.bbike-product-buy #block-reassurance { margin-top: 12px; }
+
+/* Accessories */
+.bbike-accessories { margin-top: 30px; padding-top: 30px; border-top: 2px solid #f0f0f0; }
+.bbike-accessories .products-section-title { font-size: 20px; font-weight: 800; color: #071D49; margin-bottom: 20px; }
+
+/* Product additional info (delivery, return) */
+.bbike-product-buy .product-additional-info { font-size: 12px; color: #999; margin-top: 10px; }
+
+/* Hide old product-container row structure if leaking */
+.bbike-product-page > .row.product-container { display: none; }
+
+/* Product tabs - hide them (description is inline now) */
+.bbike-product-page .product-tabs { display: none; }
+
+/* --- RESPONSIVE --- */
+
+/* Tablet: 2 columns (image + info), buy below */
+@media (max-width: 991px) {
+  .bbike-product-top {
+    flex-wrap: wrap;
+  }
+  .bbike-product-images {
+    flex: 0 0 48%;
+    max-width: 48%;
+  }
+  .bbike-product-info {
+    flex: 0 0 48%;
+    max-width: 48%;
+  }
+  .bbike-product-buy {
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: static;
+    margin-top: 20px;
+  }
+}
+
+/* Mobile: single column */
+@media (max-width: 575px) {
+  .bbike-product-top {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .bbike-product-images,
+  .bbike-product-info,
+  .bbike-product-buy {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .bbike-product-buy {
+    position: static;
+  }
+  .bbike-pi-name {
+    font-size: 20px !important;
+  }
+  .bbike-product-buy .product-prices .current-price-value {
+    font-size: 24px !important;
+  }
+}
+
+/* Force full-width layout for product page */
+body#product #wrapper .container { max-width: 100%; width: 100%; padding: 0 20px; }
+body#product #left-column, body#product #right-column { display: none !important; }
+body#product #content-wrapper { width: 100% !important; max-width: 100% !important; flex: 0 0 100% !important; }
+
+/* ========== PRODUCT PAGE 3-COLUMN FITADIUM ========== */
+
+/* Force full width on product page */
+body#product #left-column, body#product #right-column { display: none !important; }
+body#product #content-wrapper { width: 100% !important; max-width: 100% !important; flex: 0 0 100% !important; }
+
+/* 3 column layout */
+.bbike-product-top { display: flex; gap: 24px; margin-bottom: 30px; }
+.bbike-product-images { flex: 0 0 35%; max-width: 35%; }
+.bbike-product-info { flex: 0 0 35%; max-width: 35%; }
+.bbike-product-buy { flex: 0 0 30%; max-width: 30%; background: #f8f9fa; border-radius: 10px; padding: 20px; position: sticky; top: 20px; align-self: flex-start; }
+
+/* Images */
+.bbike-product-images .product-cover img { width: 100%; height: auto; border-radius: 8px; }
+.bbike-product-images .product-flags { position: absolute; top: 8px; left: 8px; z-index: 3; }
+
+/* Info column */
+.bbike-product-info .bbike-pi-brand { display: block; font-size: 12px; color: #999; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; margin-bottom: 4px; }
+.bbike-product-info .bbike-pi-brand a { color: #999; text-decoration: none; }
+.bbike-product-info .bbike-pi-name { font-size: 24px; font-weight: 800; color: #071D49; margin: 0 0 10px 0; line-height: 1.3; }
+.bbike-product-info .bbike-pi-short-desc { font-size: 14px; color: #555; line-height: 1.6; margin-bottom: 16px; }
+.bbike-product-info 
+.bbike-product-info .bbike-pi-desc-box h3 { font-size: 15px; font-weight: 700; color: #071D49; text-transform: uppercase; margin: 0 0 10px 0; }
+.bbike-product-info .bbike-pi-desc-box .product-description { font-size: 13px; color: #555; line-height: 1.6; }
+
+/* Buy box */
+.bbike-product-buy .bbike-pb-variants { margin-bottom: 12px; }
+.bbike-product-buy .product-variants-item { margin-bottom: 10px; }
+.bbike-product-buy .product-variants-item .control-label { display: block; font-size: 12px; font-weight: 700; color: #071D49; text-transform: uppercase; margin-bottom: 4px; }
+.bbike-product-buy .product-variants-item select { width: 100%; padding: 9px 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 13px; }
+
+/* Stock */
+.bbike-product-buy .bbike-pb-stock { margin-bottom: 10px; }
+.bbike-product-buy .bbike-pb-stock span { display: inline-flex; align-items: center; gap: 4px; font-size: 13px; font-weight: 600; }
+.bbike-product-buy .stock-ok { color: #4CAF50; }
+.bbike-product-buy .stock-low { color: #FF9800; }
+.bbike-product-buy .stock-out { color: #FF4026; }
+.bbike-product-buy .bbike-pb-stock .material-icons { font-size: 16px; }
+
+/* Price */
+.bbike-product-buy .bbike-pb-price { margin-bottom: 12px; }
+.bbike-product-buy .bbike-pb-price .current-price { display: block; font-size: 28px; font-weight: 800; color: #071D49; }
+.bbike-product-buy .bbike-pb-price .current-price.has-discount { color: #FF4026; }
+.bbike-product-buy .bbike-pb-price .old-price { text-decoration: line-through; color: #999; font-size: 14px; margin-right: 6px; }
+.bbike-product-buy .bbike-pb-price .discount-badge { display: inline-block; background: #FF4026; color: #fff; font-size: 11px; font-weight: 700; padding: 2px 6px; border-radius: 3px; }
+.bbike-product-buy .bbike-pb-price .tax-label { display: block; font-size: 11px; color: #999; margin-top: 2px; }
+
+/* Quantity selector */
+.bbike-product-buy .bbike-pb-qty { margin-bottom: 14px; }
+.bbike-product-buy .bbike-pb-qty label { display: block; font-size: 12px; font-weight: 700; color: #071D49; text-transform: uppercase; margin-bottom: 4px; }
+
+/* Add to cart button */
+.bbike-product-buy .bbike-pb-cart-btn,
+.bbike-product-buy button.bbike-pb-cart-btn,
+.bbike-product-buy button.btn.btn-primary.bbike-pb-cart-btn {
+  display: block !important;
+  width: 100% !important;
+  padding: 16px 20px !important;
+  background: linear-gradient(180deg, #FDD76E 0%, #FDAF4E 100%) !important;
+  color: #071D49 !important;
+  border: none !important;
+  border-radius: 6px !important;
+  font-size: 16px !important;
+  font-weight: 800 !important;
+  cursor: pointer !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  text-align: center !important;
+  box-shadow: 0 3px 10px rgba(253,175,78,0.35) !important;
+  transition: all 0.3s ease !important;
+  margin-bottom: 14px;
+}
+.bbike-product-buy .bbike-pb-cart-btn:hover {
+  background: linear-gradient(180deg, #FDCB6E 0%, #E89A35 100%) !important;
+  box-shadow: 0 5px 15px rgba(253,175,78,0.5) !important;
+}
+
+/* Reassurance in buy box */
+/* Reassurance Fitadium-style */
+.bbike-pb-reassurance-fitadium { margin-top: 20px; border-top: 1px solid #e5e5e5; }
+.bbike-reas-item { display: flex; align-items: flex-start; gap: 14px; padding: 14px 0; border-bottom: 1px solid #f0f0f0; }
+.bbike-reas-item:last-child { border-bottom: none; }
+.bbike-reas-icon { flex-shrink: 0; width: 24px; height: 24px; margin-top: 2px; }
+.bbike-reas-icon svg { display: block; }
+.bbike-reas-text { font-size: 13.5px; color: #333; line-height: 1.5; }
+.bbike-reas-text strong { color: #222; font-weight: 600; }
+.bbike-reas-sub { color: #666; font-size: 12.5px; }
+.bbike-reas-link { color: #071D49; text-decoration: underline; font-size: 12.5px; }
+.bbike-reas-link:hover { color: #f5a623; }
+.bbike-countdown-time { color: #e8870e; font-weight: 700; }
+.bbike-reas-countdown .bbike-reas-text { font-size: 13.5px; }
+.bbike-delivery-day { color: #071D49; font-weight: 700; }
+
+/* Hide old PS elements on product page */
+body#product .product-add-to-cart { display: none !important; }
+body#product .product-prices { display: none !important; }
+body#product #product-availability { display: none !important; }
+body#product .product-additional-info { display: none !important; }
+body#product .social-sharing { display: none !important; }
+body#product .blockreassurance { display: none !important; }
+body#product .tabs, body#product .product-tabs { display: none !important; }
+
+/* Responsive */
+@media (max-width: 991px) {
+  .bbike-product-top { flex-wrap: wrap; }
+  .bbike-product-images { flex: 0 0 50%; max-width: 50%; }
+  .bbike-product-info { flex: 0 0 50%; max-width: 50%; }
+  .bbike-product-buy { flex: 0 0 100%; max-width: 100%; position: static; }
+}
+@media (max-width: 575px) {
+  .bbike-product-images, .bbike-product-info, .bbike-product-buy { flex: 0 0 100%; max-width: 100%; }
+}
+
+/* Price + Qty same row on product page */
+.bbike-pb-price-qty-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid #e8e8e8; }
+.bbike-pb-price-qty-row .bbike-pb-price { flex: 1; }
+.bbike-pb-price-qty-row .bbike-pb-qty { flex-shrink: 0; }
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========== TOUCHSPIN HORIZONTAL VIA CSS ========== */
+.bbike-pb-qty .bootstrap-touchspin,
+.bbike-qv-qty .bootstrap-touchspin {
+  display: grid !important;
+  grid-template-columns: 40px 1fr 40px !important;
+  grid-template-rows: 42px !important;
+  border: 1px solid #ddd !important;
+  border-radius: 4px !important;
+  overflow: hidden !important;
+  width: fit-content !important;
+}
+.bbike-pb-qty .bootstrap-touchspin-prefix,
+.bbike-pb-qty .bootstrap-touchspin-postfix,
+.bbike-qv-qty .bootstrap-touchspin-prefix,
+.bbike-qv-qty .bootstrap-touchspin-postfix {
+  display: none !important;
+}
+.bbike-pb-qty .input-group-btn-vertical,
+.bbike-qv-qty .input-group-btn-vertical {
+  display: contents !important;
+}
+.bbike-pb-qty .bootstrap-touchspin-down,
+.bbike-qv-qty .bootstrap-touchspin-down {
+  grid-column: 1 !important; grid-row: 1 !important;
+  width: 40px !important; height: 42px !important;
+  display: flex !important; align-items: center !important; justify-content: center !important;
+  background: #fff !important; border: none !important;
+  font-size: 18px !important; font-weight: 600 !important; color: #333 !important;
+  cursor: pointer !important; border-radius: 0 !important; padding: 0 !important;
+  order: -1 !important;
+}
+.bbike-pb-qty .bootstrap-touchspin input,
+.bbike-qv-qty .bootstrap-touchspin input,
+.bbike-pb-qty #quantity_wanted,
+.bbike-qv-qty #quantity_wanted {
+  grid-column: 2 !important; grid-row: 1 !important;
+  width: 48px !important; height: 42px !important;
+  border: none !important; text-align: center !important;
+  font-size: 16px !important; font-weight: 600 !important; color: #071D49 !important;
+  background: #fff !important; -moz-appearance: textfield !important;
+}
+.bbike-pb-qty .bootstrap-touchspin-up,
+.bbike-qv-qty .bootstrap-touchspin-up {
+  grid-column: 3 !important; grid-row: 1 !important;
+  width: 40px !important; height: 42px !important;
+  display: flex !important; align-items: center !important; justify-content: center !important;
+  background: #fff !important; border: none !important;
+  font-size: 18px !important; font-weight: 600 !important; color: #333 !important;
+  cursor: pointer !important; border-radius: 0 !important; padding: 0 !important;
+}
+.bbike-pb-qty .bootstrap-touchspin-down:hover,
+.bbike-pb-qty .bootstrap-touchspin-up:hover,
+.bbike-qv-qty .bootstrap-touchspin-down:hover,
+.bbike-qv-qty .bootstrap-touchspin-up:hover {
+  background: #f5f5f5 !important;
+}
+.bbike-pb-qty .bootstrap-touchspin-down i,
+.bbike-pb-qty .bootstrap-touchspin-up i,
+.bbike-qv-qty .bootstrap-touchspin-down i,
+.bbike-qv-qty .bootstrap-touchspin-up i {
+  display: none !important;
+}
+.bbike-pb-qty .bootstrap-touchspin-down::after,
+.bbike-qv-qty .bootstrap-touchspin-down::after {
+  content: '-' !important; font-size: 20px; font-weight: 600; color: #333;
+}
+.bbike-pb-qty .bootstrap-touchspin-up::after,
+.bbike-qv-qty .bootstrap-touchspin-up::after {
+  content: '+' !important; font-size: 20px; font-weight: 600; color: #333;
+}
+.bbike-pb-qty input::-webkit-outer-spin-button,
+.bbike-pb-qty input::-webkit-inner-spin-button,
+.bbike-qv-qty input::-webkit-outer-spin-button,
+.bbike-qv-qty input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important; margin: 0 !important;
+}
+.bbike-pb-qty .control-label, .bbike-qv-qty .control-label { display: none !important; }
+
+
+/* === Offre du moment === */
+.bbike-offre-moment { margin-top: 20px; border: 1px solid #e5e5e5; border-radius: 4px; padding: 16px; background: #fff; }
+.bbike-offre-badge { display: inline-block; background: linear-gradient(135deg, #e74c3c, #c0392b); color: #fff; font-size: 11px; font-weight: 800; text-transform: uppercase; padding: 4px 12px; border-radius: 3px; letter-spacing: 0.5px; margin-bottom: 10px; }
+.bbike-offre-text { font-size: 14px; color: #071D49; line-height: 1.5; }
+.bbike-offre-text strong { font-weight: 700; }
+.bbike-offre-link { display: inline-block; margin-top: 6px; font-size: 12.5px; color: #071D49; text-decoration: underline; }
+.bbike-offre-link:hover { color: #e8870e; }
+
+/* === Write review link === */
+.bbike-pi-write-review { display: inline-block; font-size: 13px; color: #071D49; text-decoration: underline; margin-bottom: 12px; }
+.bbike-pi-write-review:hover { color: #e8870e; }
+
+/* === See more details link === */
+.bbike-pi-see-more { display: inline-block; font-size: 13px; color: #071D49; text-decoration: underline; margin-top: 10px; }
+.bbike-pi-see-more:hover { color: #e8870e; }
+
+/* === Product tabs section (bottom) === */
+.bbike-tabs-section { margin-top: 40px; border-top: 1px solid #e5e5e5; }
+.bbike-tabs-nav { display: flex; gap: 0; border-bottom: 2px solid #e5e5e5; }
+.bbike-tab-btn { background: none; border: none; padding: 16px 28px; font-size: 15px; font-weight: 600; color: #666; cursor: pointer; position: relative; transition: color 0.2s; }
+.bbike-tab-btn:hover { color: #071D49; }
+.bbike-tab-btn.active { color: #071D49; }
+.bbike-tab-btn.active::after { content: ''; position: absolute; bottom: -2px; left: 0; right: 0; height: 3px; background: #e8870e; border-radius: 2px 2px 0 0; }
+.bbike-tabs-content { padding: 30px 0; }
+.bbike-tab-pane { display: none; }
+.bbike-tab-pane.active { display: block; }
+
+/* Tab description layout: image left + text right (like Fitadium) */
+.bbike-tab-desc-layout { display: flex; gap: 40px; align-items: flex-start; }
+.bbike-tab-desc-img { flex: 0 0 40%; max-width: 40%; }
+.bbike-tab-desc-img img { width: 100%; height: auto; border-radius: 8px; }
+.bbike-tab-desc-text { flex: 1; font-size: 15px; line-height: 1.7; color: #333; }
+.bbike-tab-desc-text h2, .bbike-tab-desc-text h3 { color: #071D49; margin-top: 0; margin-bottom: 12px; }
+.bbike-tab-desc-text ul { padding-left: 0; list-style: none; }
+.bbike-tab-desc-text ul li::before { content: '\2714'; color: #e8870e; font-weight: 700; margin-right: 8px; }
+.bbike-tab-desc-text ul li { padding: 4px 0; }
+.bbike-tab-desc-text strong { color: #222; }
+
+/* Composition table */
+.bbike-composition-table { width: 100%; border-collapse: collapse; }
+.bbike-composition-table td { padding: 10px 14px; border-bottom: 1px solid #f0f0f0; font-size: 14px; }
+.bbike-composition-table tr:last-child td { border-bottom: none; }
+.bbike-composition-table td:first-child { width: 40%; color: #071D49; }
+
+
+/* ========================================
+   FOOTER PRODUCT SECTIONS (category, crossselling, viewed)
+   Uniform card grid - same height cards
+   ======================================== */
+.bbike-footer-products {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid #eee;
+}
+
+.bbike-footer-products .bbike-section-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1b2a4a;
+  margin-bottom: 20px;
+}
+
+.bbike-product-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 16px !important;
+}
+
+.bbike-product-grid > .js-product.product {
+  width: 100% !important;
+  flex: none !important;
+  max-width: 100% !important;
+}
+
+.bbike-product-grid .product-miniature {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+}
+
+.bbike-product-grid .product-miniature:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.bbike-product-grid .product-container {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+}
+
+.bbike-product-grid .product-container-link {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
+  text-decoration: none;
+  color: inherit;
+}
+
+.bbike-product-grid .thumbnail-container {
+  width: 100% !important;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bbike-product-grid .thumbnail-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.bbike-product-grid .product-thumbnail {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.bbike-product-grid .product-thumbnail img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  width: auto !important;
+  height: auto !important;
+}
+
+.bbike-product-grid .product-description {
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 12px !important;
+  min-height: 140px !important;
+}
+
+.bbike-product-grid .product-manufacturer {
+  font-size: 11px;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.bbike-product-grid .product-title {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #1b2a4a;
+  line-height: 1.3;
+  margin-bottom: 6px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.bbike-product-grid .product-description-short {
+  font-size: 11px;
+  color: #777;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.bbike-product-grid .product-price-and-shipping {
+  margin-top: auto !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bbike-product-grid .price {
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  color: #1b2a4a;
+}
+
+.bbike-product-grid .price.has-discount {
+  color: #e74c3c !important;
+}
+
+.bbike-product-grid .regular-price {
+  font-size: 12px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.bbike-product-grid .discount-badge {
+  font-size: 11px;
+  background: #e74c3c;
+  color: #fff;
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .bbike-product-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+@media (max-width: 575px) {
+  .bbike-product-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}

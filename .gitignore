@@ -1,0 +1,13 @@
+﻿# PrestaShop index.php security files
+# (keep them, they're part of the theme)
+
+# Backups
+*.bak
+*.bak.*
+
+# Generated
+_gen_preview.php
+
+# OS
+Thumbs.db
+.DS_Store
