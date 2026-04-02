@@ -30,7 +30,7 @@ body#my-account, body#identity, body#authentication, body#search,
 body#cms, body#contact, body#pagenotfound, body#prices-drop,
 body#new-products, body#best-sales, body#stores, body#guest-tracking,
 body#order-confirmation, body#manufacturer, body, [id] {
-  font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-family: 'Proxima Nova', 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
 }
 
 body {
@@ -71,8 +71,8 @@ header#header,
 /* Top nav */
 #header .header-nav,
 .header-nav {
-  background: #041232 !important;
-  border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+  background: #fff !important;
+  border-bottom: 1px solid #eee !important;
   max-height: none !important;
   padding: 0 !important;
   box-shadow: none !important;
@@ -182,8 +182,9 @@ header#header,
 #header .position-static,
 #header .menu-container,
 .menu-container {
-  background: #0E2D6B !important;
-  border-top: 1px solid rgba(255,255,255,0.06) !important;
+  background: #fff !important;
+  border-top: none !important;
+  border-bottom: 2px solid #1b2a4a;
 }
 
 #top-menu {
@@ -193,11 +194,11 @@ header#header,
 
 #top-menu > li > a,
 #top-menu > .category > a {
-  color: #FFFFFF !important;
+  color: #1b2a4a !important;
   font-weight: 600 !important;
-  font-size: 13px !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.5px !important;
+  font-size: 14px !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
   padding: 14px 20px !important;
   border-bottom: 3px solid transparent !important;
   transition: all 0.3s ease !important;
@@ -567,7 +568,7 @@ footer.js-footer {
 #footer .links a,
 #footer .block-contact a,
 footer#footer a {
-  color: rgba(255,255,255,0.7) !important;
+  color: #333 !important;
   font-size: 14px !important;
 }
 
@@ -580,7 +581,7 @@ footer#footer a:hover {
 #footer p,
 #footer li,
 #footer .block-contact {
-  color: rgba(255,255,255,0.7) !important;
+  color: #333 !important;
 }
 
 #footer .block-social li a {
@@ -2528,6 +2529,10 @@ nav.breadcrumb {
   position: relative;
   overflow: hidden;
   background: #f8f9fa;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .product-container .thumbnail-inner .product-thumbnail {

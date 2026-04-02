@@ -1,6 +1,7 @@
 # BBike Belleville Theme — TODO
 
 ## Priority: High
+- [ ] **Mega-menu module** : développer un module BBike MegaMenu from scratch, inspiré de PM AdvancedTopMenu (user fournira le plugin pour référence). Colonnes, sous-catégories, images, item "PROMO" en rouge
 - [ ] Import déclinaisons for 99 remaining products (only product 24 done)
 - [ ] WebService API: verify utilisation/composition/precaution fields are readable/writable via API
 - [ ] Populate utilisation/composition/precaution content for all products via Nutrimeo API
@@ -8,6 +9,9 @@
 - [ ] Slider: replace default "Sample" content with real banners
 
 ## Priority: Medium
+- [ ] **Système de badges produit** : développer un module ou feature pour gérer des badges custom (BEST SELLER, CADEAU OFFERT, EXCLUSIF, etc.) — actuellement seuls les badges natifs PS fonctionnent (NOUVEAU, PROMO). Réfléchir à la logique d'affichage (règles auto vs manuel par produit)
+- [ ] **Gestion campagnes promo** : définir un workflow pour lancer des promos rapidement — règles de prix catalogue (par catégorie/marque), codes promo panier, specific_price par produit. Configurer le paramètre "durée nouveau produit" en BO. Penser à l'affichage bandeau promo dynamique (actuellement hardcodé)
+- [ ] **Icônes réassurance** : faire créer des illustrations SVG custom par un graphiste (style sketch/dessiné comme Fitadium)
 - [ ] Mega-menu with rich sub-categories
 - [ ] Responsive testing (mobile/tablet breakpoints)
 - [ ] Fonts: verify Noto Sans loading correctly everywhere

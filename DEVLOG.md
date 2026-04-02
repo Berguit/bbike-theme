@@ -1,5 +1,64 @@
 # BBike Belleville Theme — Dev Log
 
+## 2026-04-02 (continued) — Full site rework session
+
+### Header rework
+- Restored Classic template structure (all hooks preserved: displayNav1, displayNav2, displayTop, displaySearch)
+- Added promo bar (red, -20€ code BBIKE20)
+- Top bar: 🇫🇷 flag | "Made with ❤️ in Val Thorens" center | "Aide & Contact" right
+- Header main: Logo | Search bar (rounded 25px) | Mon compte + Panier with SVG icons
+- Menu bar: white bg, navy border-bottom, centered links 14px
+- Fixed bbike.css navy backgrounds → white for header-nav
+- Lesson learned: NEVER rewrite templates from scratch, always modify Classic original
+
+### Cart modal (Fitadium style)
+- Created theme override `modules/ps_shoppingcart/modal.tpl` based on Classic
+- "AJOUTÉ AU PANIER" centered with green check, ✕ top-right
+- Shipping progress bar in pill-shaped box
+- Product: image + name + qty × price + total
+- Buttons: "CONTINUER LE SHOPPING" (outline orange) + "VOIR MON PANIER" (gradient orange)
+- Fixed: ps_shoppingcart module hooks restored by keeping Classic template structure
+
+### Homepage improvements
+- H1 title "BOUTIQUE DE PRODUITS MUSCULATION ET FITNESS" (Proxima Nova bold italic)
+- Removed slider captions (Sample 1/2/3 demo text)
+- Slider height: 450px
+- Reassurance bar: SVG outline icons, Fitadium layout with separators
+- Category images: replaced with real product photos from each category
+- Section titles: Proxima Nova bold italic, left-aligned, 22px
+- Content width: 1200px container (narrower than full-width slider)
+- Spacing tightened between sections
+- Card images: 250px max-height zone with padding
+- Fake sales data added (20 products) + 30 promo specific_prices
+
+### New homepage sections
+- Reviews carousel (Trustpilot style, 8 review cards)
+- Brands section with real logos (ON, Scitec, BioTech, Olimp, Nutrimuscle, SSN, Nocco)
+- SEO text section
+- Bottom reassurance (4 items: livraison, conseils, retours, paiement)
+- Newsletter bar (BBIKE'NEWS)
+- Footer: navy, 3 columns (Top Catégories, Infos Pratiques, Mon Compte) + social icons + payments
+
+### Auth pages (Fitadium style)
+- Login: two-column layout (Déjà client? / Nouveau client?)
+- Register: single column, labels on top, wide fields, orange gradient button
+- Password reset: styled with Proxima Nova title
+- Fixed: removed partner optin, customer_privacy (disabled ps_dataprivacy module)
+- Fixed: newsletter text accents (patched ps_emailsubscription htmlentitiesUTF8 bug)
+- Password show/hide: eye SVG icon via form-fields.tpl override
+- "Connexion" → "Mon compte" (translation override)
+
+### Fonts
+- Proxima Nova self-hosted (Regular, Semibold, Bold, Extrabold .woff files)
+- @font-face in dedicated fonts.css + injected in theme.css
+- Set as primary font in bbike.css font stack
+
+### Bug fixes
+- CSS cache busting (version bumps throughout)
+- Fixed double custom.js loading (removed from head.tpl + layout, kept in theme.yml)
+- Category image URLs fixed (was pointing to themes/classic/)
+- Promoted 30 products with specific_prices (-10% to -30%)
+
 ## 2026-04-02 — Product fields module + product page fixes
 
 ### Module bbike_productfields v1.4.0

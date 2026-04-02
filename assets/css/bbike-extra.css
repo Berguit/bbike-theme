@@ -1,141 +1,167 @@
-/* BBike Extra CSS - Filters, Sidebar, QuickView */
 
-/* Sidebar filters */
-body #search_filters ul.faceted-slider.collapse, body #search_filters .facet ul.faceted-slider { background: none !important; background-color: transparent !important; border: none !important; height: auto !important; padding: 0 !important; overflow: visible !important; margin: 10px 8px !important; }
-body #search_filters .ui-slider.ui-widget-content { background: #E8E9ED !important; border: none !important; height: 4px !important; border-radius: 2px !important; }
-#search_filters .facet .faceted-slider .ui-slider-range { background: #071D49 !important; height: 4px !important; border-radius: 2px !important; }
-#search_filters .facet .faceted-slider .ui-slider-handle { background: #071D49 !important; border: 3px solid #fff !important; border-radius: 50% !important; width: 18px !important; height: 18px !important; top: -7px !important; cursor: pointer !important; box-shadow: 0 1px 4px rgba(0,0,0,0.2) !important; outline: none !important; }
-#search_filters .facet .faceted-slider .ui-slider-handle:hover { background: #FDAF4E !important; }
-#search_filters .facet-title { font-size: 14px !important; font-weight: 700 !important; color: #071D49 !important; text-transform: uppercase !important; letter-spacing: 0.5px !important; padding-bottom: 6px !important; margin-bottom: 6px !important; border-bottom: 2px solid #071D49 !important; }
-#left-column .block-categories { display: none !important; }
-#search_filters .facet { margin-bottom: 16px !important; padding-bottom: 12px !important; border-bottom: 1px solid #eee !important; }
-#search_filters .facet:last-child { border-bottom: none !important; }
-#search_filters .facet .facet-label { font-size: 13px !important; color: #333 !important; padding: 3px 0 !important; }
-#search_filters .facet .custom-checkbox input[type='checkbox'] + span { border-color: #071D49 !important; border-radius: 3px !important; }
-#search_filters .facet .custom-checkbox input[type='checkbox']:checked + span { background: #071D49 !important; }
-#search_filters .facet p { font-size: 15px !important; font-weight: 700 !important; color: #071D49 !important; margin: 0 0 4px 0 !important; }
+/* ========================================
+   HEADER - Fitadium style (on Classic structure)
+   ======================================== */
 
-/* Active filters */
-#js-active-search-filters { background: #fff !important; padding: 0 !important; margin-bottom: 10px !important; }
-#js-active-search-filters .active-filter-title { display: inline !important; font-size: 14px !important; font-weight: 700 !important; color: #071D49 !important; margin-right: 8px !important; vertical-align: middle !important; }
-#js-active-search-filters ul { display: inline-flex !important; flex-wrap: wrap !important; gap: 6px !important; list-style: none !important; padding: 0 !important; margin: 0 !important; vertical-align: middle !important; }
-#js-active-search-filters .filter-block { display: inline-flex !important; align-items: center !important; padding: 5px 12px !important; background: #f5f5f5 !important; border: 1px solid #e0e0e0 !important; border-radius: 20px !important; font-size: 13px !important; font-weight: 600 !important; color: #333 !important; }
-#js-active-search-filters .filter-block:hover { background: #FFE1E1 !important; border-color: #FF4026 !important; }
-#js-active-search-filters .filter-block a { display: inline-flex !important; align-items: center !important; text-decoration: none !important; margin-left: 4px !important; }
-#js-active-search-filters .filter-block .material-icons { font-size: 16px !important; color: #FDAF4E !important; }
-#js-active-search-filters .filter-block:hover .material-icons { color: #FF4026 !important; }
-#js-active-search-filters .bbike-clear-all { font-size: 13px !important; color: #333 !important; text-decoration: underline !important; margin-left: 10px !important; vertical-align: middle !important; }
-#js-active-search-filters .bbike-clear-all:hover { color: #FF4026 !important; }
+/* Promo bar */
+.bbike-promo-bar {
+  background: #e74c3c;
+  color: #fff;
+  text-align: center;
+  padding: 8px 15px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.bbike-promo-bar strong { font-weight: 800; }
+.header-banner:empty { display: none; }
 
-/* Category header */
-.bbike-category-header { margin-bottom: 16px; }
-.bbike-category-header h1 { font-size: 28px; font-weight: 900; color: #071D49; text-transform: uppercase; margin: 0 0 10px 0; padding: 0; }
-.bbike-category-desc { font-size: 14px; line-height: 1.6; color: #555; max-width: 650px; margin-bottom: 16px; }
-.bbike-category-desc p { margin: 0 0 8px 0; }
-.bbike-category-desc strong { color: #071D49; }
-.bbike-subcategories { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
-.bbike-subcategory-pill { display: inline-flex; align-items: center; gap: 4px; padding: 8px 16px; border: 1px solid #ddd; border-radius: 6px; font-size: 13px; font-weight: 600; color: #071D49; text-decoration: none; transition: all 0.2s ease; background: #fff; }
-.bbike-subcategory-pill:hover { border-color: #FDAF4E; color: #FDAF4E; text-decoration: none; }
-.bbike-subcategory-pill .material-icons { font-size: 16px; color: #FDAF4E; }
+/* Top nav: compact, right-aligned */
+#header .header-nav,
+.bbike-header-nav {
+  background: #fff !important;
+  border-bottom: 1px solid #f0f0f0 !important;
+  max-height: none !important;
+  padding: 2px 0 !important;
+}
+.bbike-header-nav .container { max-width: 1200px; }
+.bbike-header-nav .right-nav {
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+}
+#header .header-nav a { color: #333 !important; font-size: 12px !important; }
+#header .header-nav a:hover { color: #1b2a4a !important; }
 
-/* SEO content bottom */
-.bbike-seo-content { padding: 30px 0; margin-top: 20px; border-top: 1px solid #eee; font-size: 14px; line-height: 1.7; color: #555; }
-.bbike-seo-content h2, .bbike-seo-content h3 { font-size: 20px; font-weight: 700; color: #071D49; margin: 20px 0 10px 0; }
-.bbike-seo-content h2:first-child, .bbike-seo-content h3:first-child { margin-top: 0; }
-.bbike-seo-content p { margin: 0 0 12px 0; }
-.bbike-seo-content strong { color: #071D49; }
-.bbike-seo-content a { color: #FDAF4E; text-decoration: underline; }
+/* Hide the top nav's cart/user (we show them in header-main) */
+.bbike-header-nav .blockcart,
+.bbike-header-nav .user-info {
+  display: none !important;
+}
 
-/* QuickView modal Fitadium style */
-.bbike-quickview { border-radius: 12px !important; overflow: hidden; position: relative; }
-.bbike-quickview .modal-header, .bbike-quickview .modal-footer { display: none !important; }
-.bbike-quickview .modal-dialog { max-width: 700px !important; }
-.bbike-qv-close { position: absolute !important; top: 10px; right: 10px; z-index: 10; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; background: #f5f5f5; border-radius: 50%; border: none; cursor: pointer; }
-.bbike-qv-close .material-icons { font-size: 18px; color: #333; }
-.bbike-qv-close:hover { background: #eee; }
-.bbike-qv-layout { display: flex !important; }
-.bbike-qv-left { flex: 0 0 50%; max-width: 50%; background: #fff; display: flex; align-items: center; justify-content: center; padding: 20px; }
-.bbike-qv-left picture { width: 100%; }
-.bbike-qv-left img { width: 100%; height: auto; display: block; }
-.bbike-qv-right { flex: 0 0 50%; max-width: 50%; padding: 24px 24px 24px 16px; display: flex; flex-direction: column; }
-.bbike-qv-brand { display: block; font-size: 11px; color: #999; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; margin-bottom: 2px; }
-.bbike-qv-name { font-size: 17px !important; font-weight: 700 !important; color: #071D49 !important; margin: 0 0 12px 0 !important; line-height: 1.3 !important; }
-.bbike-quickview .product-variants { margin-bottom: 8px; }
-.bbike-quickview .product-variants-item { margin-bottom: 8px; }
-.bbike-quickview .product-variants-item .control-label { display: block; font-size: 12px; font-weight: 700; color: #071D49; margin-bottom: 3px; }
-.bbike-quickview .product-variants-item select { width: 100%; padding: 8px 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 13px; color: #333; background: #fff; appearance: auto; }
-.bbike-qv-stock { margin-bottom: 10px; }
-.bbike-qv-stock span { display: inline-flex; align-items: center; gap: 4px; font-size: 13px; font-weight: 600; }
-.bbike-qv-stock .stock-ok { color: #4CAF50; }
-.bbike-qv-stock .stock-low { color: #FF9800; }
-.bbike-qv-stock .stock-out { color: #FF4026; }
-.bbike-qv-stock .material-icons { font-size: 16px; }
-.bbike-qv-price-qty { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
-.bbike-qv-price { flex: 1; }
-.bbike-qv-price .old-price { text-decoration: line-through; color: #999; font-size: 13px; margin-right: 4px; }
-.bbike-qv-price .discount-badge { display: inline-block; background: #FF4026; color: #fff; font-size: 10px; font-weight: 700; padding: 1px 5px; border-radius: 3px; }
-.bbike-qv-price .current-price { display: block; font-size: 22px; font-weight: 800; color: #071D49; margin-top: 2px; }
-.bbike-qv-price .current-price.has-discount { color: #FF4026; }
-.bbike-qv-qty { flex-shrink: 0; }
-.qty-selector { display: flex; align-items: center; border: 1px solid #ddd; border-radius: 4px; overflow: hidden; }
-.qty-btn { width: 36px; height: 38px; display: flex; align-items: center; justify-content: center; background: #fff; border: none; cursor: pointer; font-size: 18px; font-weight: 600; color: #333; transition: background 0.2s; }
-.qty-btn:hover { background: #f5f5f5; }
-.qty-input { width: 44px; height: 38px; border: none; border-left: 1px solid #ddd; border-right: 1px solid #ddd; text-align: center; font-size: 15px; font-weight: 600; color: #071D49; -moz-appearance: textfield; }
-.qty-input::-webkit-outer-spin-button, .qty-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+/* === MAIN HEADER ROW: Logo | Search | Account+Cart === */
+#header .header-top,
+.bbike-header-top {
+  padding: 18px 0 !important;
+  background: #fff !important;
+}
+.bbike-header-top .container { max-width: 1200px; }
 
+.bbike-header-main {
+  display: flex !important;
+  align-items: center !important;
+}
 
+/* Logo */
+#_desktop_logo img { max-height: 45px; width: auto; }
 
-.bbike-qv-link { display: block; text-align: center; margin-top: 12px; font-size: 13px; color: #FDAF4E; font-weight: 700; text-decoration: none; }
-.bbike-qv-link:hover { color: #071D49; text-decoration: underline; }
-.bbike-quickview .product-add-to-cart, .bbike-quickview #product-description-short, .bbike-quickview .product-prices, .bbike-quickview .product-additional-info { display: none !important; }
+/* Search bar: wide, centered, rounded */
+.bbike-search-col {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
 
-/* Hide bootstrap-touchspin injected elements in quickview */
-.bbike-quickview .bootstrap-touchspin { display: none !important; }
-.bbike-quickview .bootstrap-touchspin-injected { display: none !important; }
-.bbike-quickview .input-group-btn { display: none !important; }
-.bbike-quickview .bootstrap-touchspin-down, .bbike-quickview .bootstrap-touchspin-up { display: none !important; }
-.bbike-quickview .js-touchspin.bootstrap-touchspin-down, .bbike-quickview .js-touchspin.bootstrap-touchspin-up { display: none !important; }
-.bbike-quickview .qty-selector { display: flex !important; }
-.bbike-quickview .qty-selector .qty-btn { display: flex !important; }
-.bbike-quickview .qty-selector .qty-input { display: block !important; }
-
-
-
-/* Cart button - beats button.btn-primary */
-.bbike-quickview .bbike-qv-cart-btn,
-.bbike-quickview button.bbike-qv-cart-btn,
-.bbike-quickview button.btn.btn-primary.add-to-cart.bbike-qv-cart-btn,
-.modal .bbike-qv-cart-btn {
-  display: block !important;
+.bbike-search-col .search-widget,
+.bbike-search-col #search_widget {
   width: 100% !important;
-  padding: 16px 20px !important;
-  background: linear-gradient(180deg, #FDD76E 0%, #FDAF4E 100%) !important;
-  color: #071D49 !important;
-  border: none !important;
-  border-radius: 6px !important;
-  font-size: 16px !important;
-  font-weight: 800 !important;
-  cursor: pointer !important;
-  text-transform: uppercase !important;
-  letter-spacing: 1px !important;
-  text-align: center !important;
-  transition: all 0.3s ease !important;
-  box-shadow: 0 3px 10px rgba(253,175,78,0.35) !important;
+  max-width: 100% !important;
 }
-.bbike-quickview .bbike-qv-cart-btn:hover,
-.bbike-quickview button.bbike-qv-cart-btn:hover,
-.modal .bbike-qv-cart-btn:hover {
-  background: linear-gradient(180deg, #FDCB6E 0%, #E89A35 100%) !important;
-  box-shadow: 0 5px 15px rgba(253,175,78,0.5) !important;
-  transform: translateY(-1px) !important;
+
+.bbike-search-col .search-widget form { width: 100%; }
+
+.bbike-search-col .search-widget input[type="text"] {
+  width: 100% !important;
+  min-width: 100% !important;
+  padding: 12px 50px 12px 20px !important;
+  border: 1px solid #ccc !important;
+  border-radius: 25px !important;
+  font-size: 14px !important;
 }
-.bbike-quickview .bbike-qv-cart-btn:disabled,
-.modal .bbike-qv-cart-btn:disabled {
-  background: #ddd !important;
-  color: #999 !important;
-  box-shadow: none !important;
-  transform: none !important;
+.bbike-search-col .search-widget input[type="text"]:focus {
+  border-color: #1b2a4a !important;
+  outline: none !important;
 }
+
+/* Account + Cart column */
+.bbike-actions-col {
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+}
+
+#bbike-header-account {
+  display: flex !important;
+  align-items: center !important;
+  gap: 20px;
+}
+
+#bbike-header-account .user-info {
+  margin: 0 !important;
+  white-space: nowrap;
+}
+
+#bbike-header-account .user-info a {
+  color: #1b2a4a !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+}
+
+#bbike-header-account .blockcart {
+  background: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#bbike-header-account .blockcart a {
+  color: #1b2a4a !important;
+  font-weight: 600 !important;
+}
+
+/* Hide search from displayTop (we moved it to search-col) */
+.bbike-menu-bar #search_widget,
+.bbike-menu-bar .search-widget {
+  display: none !important;
+}
+
+/* === MENU BAR === */
+.bbike-menu-bar {
+  background: #fff;
+  border-bottom: 2px solid #1b2a4a;
+}
+.bbike-menu-bar .container { max-width: 1200px; }
+
+.bbike-menu-bar #_desktop_top_menu,
+.bbike-menu-bar .top-menu[data-depth="0"] {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.bbike-menu-bar .top-menu a[data-depth="0"],
+.bbike-menu-bar #top-menu > li > a,
+.bbike-menu-bar #top-menu > .category > a {
+  color: #1b2a4a !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  padding: 12px 18px !important;
+}
+
+.bbike-menu-bar .top-menu a[data-depth="0"]:hover,
+.bbike-menu-bar #top-menu > li > a:hover {
+  color: #FDAF4E !important;
+}
+
+/* Hide old menu-container (bbike.css navy) */
+#header .menu-container,
+.menu-container {
+  display: none !important;
+}
+
+/* Remove header shadow */
+#header { box-shadow: none !important; }
+
 
 
 /* ============================================================
@@ -154,7 +180,7 @@ body #search_filters .ui-slider.ui-widget-content { background: #E8E9ED !importa
 .bbike-product-images .product-flags { position: absolute; top: 10px; left: 10px; z-index: 2; }
 .bbike-product-images .product-flag { display: inline-block; padding: 4px 10px; font-size: 11px; font-weight: 700; text-transform: uppercase; border-radius: 3px; margin-bottom: 4px; }
 .bbike-product-images .product-thumbnails { margin-top: 10px; }
-.bbike-product-images .product-thumbnails .thumb-container { display: inline-block; width: 60px; height: 60px; margin-right: 6px; border: 2px solid transparent; border-radius: 4px; overflow: hidden; cursor: pointer; transition: border-color 0.2s; }
+.bbike-product-images .product-thumbnails .thumb-container { display: inline-block; width: 60px; height: 60px; margin-right: 6px; border: 2px solid transparent; border-radius: 25px; overflow: hidden; cursor: pointer; transition: border-color 0.2s; }
 .bbike-product-images .product-thumbnails .thumb-container:hover,
 .bbike-product-images .product-thumbnails .thumb-container.selected { border-color: #FDAF4E; }
 .bbike-product-images .product-thumbnails img { width: 100%; height: 100%; object-fit: cover; }
@@ -186,7 +212,7 @@ body #search_filters .ui-slider.ui-widget-content { background: #E8E9ED !importa
 .bbike-product-buy .product-variants { margin-bottom: 14px; }
 .bbike-product-buy .product-variants .product-variants-item { margin-bottom: 10px; }
 .bbike-product-buy .product-variants .control-label { display: block; font-size: 12px; font-weight: 700; color: #071D49; margin-bottom: 4px; text-transform: uppercase; }
-.bbike-product-buy .product-variants select { width: 100%; padding: 8px 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 13px; color: #333; background: #fff; }
+.bbike-product-buy .product-variants select { width: 100%; padding: 8px 12px; border: 1px solid #ddd; border-radius: 25px; font-size: 13px; color: #333; background: #fff; }
 
 /* Stock */
 .bbike-buy-stock { margin-bottom: 12px; }
@@ -259,7 +285,8 @@ body #search_filters .ui-slider.ui-widget-content { background: #E8E9ED !importa
 
 /* Accessories */
 .bbike-accessories { margin-top: 30px; padding-top: 30px; border-top: 2px solid #f0f0f0; }
-.bbike-accessories .products-section-title { font-size: 20px; font-weight: 800; color: #071D49; margin-bottom: 20px; }
+.bbike-accessories .products-section-title { font-size: 20px; font-weight: 900;
+  font-style: italic; color: #071D49; margin-bottom: 20px; }
 
 /* Product additional info (delivery, return) */
 .bbike-product-buy .product-additional-info { font-size: 12px; color: #999; margin-top: 10px; }
@@ -340,7 +367,8 @@ body#product #content-wrapper { width: 100% !important; max-width: 100% !importa
 /* Info column */
 .bbike-product-info .bbike-pi-brand { display: block; font-size: 12px; color: #999; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; margin-bottom: 4px; }
 .bbike-product-info .bbike-pi-brand a { color: #999; text-decoration: none; }
-.bbike-product-info .bbike-pi-name { font-size: 24px; font-weight: 800; color: #071D49; margin: 0 0 10px 0; line-height: 1.3; }
+.bbike-product-info .bbike-pi-name { font-size: 24px; font-weight: 900;
+  font-style: italic; color: #071D49; margin: 0 0 10px 0; line-height: 1.3; }
 .bbike-product-info .bbike-pi-short-desc { font-size: 14px; color: #555; line-height: 1.6; margin-bottom: 16px; }
 .bbike-product-info 
 .bbike-product-info .bbike-pi-desc-box h3 { font-size: 15px; font-weight: 700; color: #071D49; text-transform: uppercase; margin: 0 0 10px 0; }
@@ -350,7 +378,7 @@ body#product #content-wrapper { width: 100% !important; max-width: 100% !importa
 .bbike-product-buy .bbike-pb-variants { margin-bottom: 12px; }
 .bbike-product-buy .product-variants-item { margin-bottom: 10px; }
 .bbike-product-buy .product-variants-item .control-label { display: block; font-size: 12px; font-weight: 700; color: #071D49; text-transform: uppercase; margin-bottom: 4px; }
-.bbike-product-buy .product-variants-item select { width: 100%; padding: 9px 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 13px; }
+.bbike-product-buy .product-variants-item select { width: 100%; padding: 9px 12px; border: 1px solid #ddd; border-radius: 25px; font-size: 13px; }
 
 /* Stock */
 .bbike-product-buy .bbike-pb-stock { margin-bottom: 10px; }
@@ -362,7 +390,8 @@ body#product #content-wrapper { width: 100% !important; max-width: 100% !importa
 
 /* Price */
 .bbike-product-buy .bbike-pb-price { margin-bottom: 12px; }
-.bbike-product-buy .bbike-pb-price .current-price { display: block; font-size: 28px; font-weight: 800; color: #071D49; }
+.bbike-product-buy .bbike-pb-price .current-price { display: block; font-size: 28px; font-weight: 900;
+  font-style: italic; color: #071D49; }
 .bbike-product-buy .bbike-pb-price .current-price.has-discount { color: #FF4026; }
 .bbike-product-buy .bbike-pb-price .old-price { text-decoration: line-through; color: #999; font-size: 14px; margin-right: 6px; }
 .bbike-product-buy .bbike-pb-price .discount-badge { display: inline-block; background: #FF4026; color: #fff; font-size: 11px; font-weight: 700; padding: 2px 6px; border-radius: 3px; }
@@ -530,8 +559,9 @@ body#product .tabs, body#product .product-tabs { display: none !important; }
 
 
 /* === Offre du moment === */
-.bbike-offre-moment { margin-top: 20px; border: 1px solid #e5e5e5; border-radius: 4px; padding: 16px; background: #fff; }
-.bbike-offre-badge { display: inline-block; background: linear-gradient(135deg, #e74c3c, #c0392b); color: #fff; font-size: 11px; font-weight: 800; text-transform: uppercase; padding: 4px 12px; border-radius: 3px; letter-spacing: 0.5px; margin-bottom: 10px; }
+.bbike-offre-moment { margin-top: 20px; border: 1px solid #e5e5e5; border-radius: 25px; padding: 16px; background: #fff; }
+.bbike-offre-badge { display: inline-block; background: linear-gradient(135deg, #e74c3c, #c0392b); color: #fff; font-size: 11px; font-weight: 900;
+  font-style: italic; text-transform: uppercase; padding: 4px 12px; border-radius: 3px; letter-spacing: 0.5px; margin-bottom: 10px; }
 .bbike-offre-text { font-size: 14px; color: #071D49; line-height: 1.5; }
 .bbike-offre-text strong { font-weight: 700; }
 .bbike-offre-link { display: inline-block; margin-top: 6px; font-size: 12.5px; color: #071D49; text-decoration: underline; }
@@ -634,7 +664,7 @@ body#product .tabs, body#product .product-tabs { display: none !important; }
 
 .bbike-product-grid .thumbnail-container {
   width: 100% !important;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
   background: #f8f9fa;
   display: flex;
@@ -748,4 +778,1991 @@ body#product .tabs, body#product .product-tabs { display: none !important; }
   .bbike-product-grid {
     grid-template-columns: repeat(2, 1fr) !important;
   }
+}
+
+
+/* ========================================
+   HOMEPAGE LAYOUT FIX - Full container width
+   Remove extra padding so content fills the column
+   ======================================== */
+
+/* Homepage: remove wrapper top padding */
+body#index #wrapper {
+  padding-top: 0 !important;
+}
+
+/* Homepage: container should use more width */
+body#index #wrapper > .container {
+  width: 100% !important;
+  max-width: 1440px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Remove row negative margins compensation */
+body#index #wrapper > .container > .row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Content wrapper: remove column padding */
+body#index #content-wrapper {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Slider: flush to edges, no margin on top */
+body#index .carousel,
+body#index #carousel {
+  margin-bottom: 0 !important;
+  width: 100% !important;
+}
+
+body#index .carousel .carousel-inner {
+  width: 100%;
+}
+
+/* Homepage sections: add consistent small horizontal padding for content */
+body#index .bbike-reassurance-section,
+body#index .bbike-category-grid,
+body#index .bbike-section,
+body#index .bbike-homepage-section,
+body#index .featured-products,
+body#index .product-accessories,
+body#index [id^="bbike-"] {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* But slider stays truly full width */
+body#index .bbike-slider-section,
+body#index .carousel,
+body#index #carousel,
+body#index .homeslider-container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Remove breadcrumb spacing on homepage */
+body#index #wrapper .breadcrumb {
+  display: none !important;
+}
+
+/* Category pages and product pages: also tighten */
+body#category #wrapper > .container,
+body#product #wrapper > .container {
+  max-width: 1440px !important;
+}
+
+
+/* ========================================
+   HOMEPAGE INNER CONTAINERS - Remove width restrictions
+   Each section has a .container that limits width
+   ======================================== */
+body#index .bbike-homepage > section > .container {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
+/* Carousel tracks: remove any extra padding from module wrappers */
+body#index .bbike-carousel__track .products {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+body#index .featured-products,
+body#index .product-accessories {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+
+/* ========================================
+   SLIDER HEIGHT - Match Fitadium proportions
+   ======================================== */
+body#index .bbike-hero-slider .carousel .carousel-inner {
+  height: 450px !important;
+}
+
+body#index .bbike-hero-slider .carousel .carousel-item {
+  height: 450px !important;
+}
+
+body#index .bbike-hero-slider .carousel .carousel-item img {
+  width: 100% !important;
+  height: 450px !important;
+  object-fit: cover !important;
+}
+
+@media (max-width: 991px) {
+  body#index .bbike-hero-slider .carousel .carousel-inner,
+  body#index .bbike-hero-slider .carousel .carousel-item,
+  body#index .bbike-hero-slider .carousel .carousel-item img {
+    height: 300px !important;
+  }
+}
+
+@media (max-width: 575px) {
+  body#index .bbike-hero-slider .carousel .carousel-inner,
+  body#index .bbike-hero-slider .carousel .carousel-item,
+  body#index .bbike-hero-slider .carousel .carousel-item img {
+    height: 220px !important;
+  }
+}
+
+
+/* ========================================
+   MAIN HOMEPAGE TITLE (under slider)
+   ======================================== */
+.bbike-main-title {
+  padding: 30px 15px 16px;
+  text-align: center;
+  background: #fff;
+}
+
+.bbike-main-title h1 {
+  margin: 0;
+  
+  font-size: 24px;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: 1.5px;
+  color: #1b2a4a;
+  text-transform: uppercase;
+}
+
+
+/* ========================================
+   REASSURANCE BAR - Fitadium style
+   ======================================== */
+.bbike-reas {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 20px 15px;
+}
+
+.bbike-reas__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  max-width: 100%;
+}
+
+.bbike-reas__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 24px;
+  flex: 1;
+  justify-content: center;
+}
+
+.bbike-reas__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.bbike-reas__icon svg {
+  width: 40px;
+  height: 40px;
+}
+
+.bbike-reas__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+
+.bbike-reas__text strong {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1b2a4a;
+  white-space: nowrap;
+}
+
+.bbike-reas__text span {
+  font-size: 11px;
+  color: #888;
+}
+
+.bbike-reas__stars {
+  color: #f5a623 !important;
+  font-size: 12px !important;
+}
+
+.bbike-reas__stars em {
+  color: #888;
+  font-style: normal;
+  font-size: 11px;
+}
+
+.bbike-reas__sep {
+  width: 1px;
+  height: 40px;
+  background: #ddd;
+  flex-shrink: 0;
+}
+
+@media (max-width: 991px) {
+  .bbike-reas__inner {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .bbike-reas__item {
+    flex: 0 0 calc(50% - 12px);
+    padding: 8px 12px;
+  }
+  .bbike-reas__sep {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .bbike-reas__item {
+    flex: 0 0 100%;
+  }
+}
+
+
+
+/* ========================================
+   TIGHTEN SECTION SPACING
+   ======================================== */
+body#index .bbike-categories {
+  margin-bottom: 30px !important;
+  padding-bottom: 0 !important;
+}
+body#index .bbike-top-sales {
+  padding-top: 10px !important;
+}
+body#index .bbike-section-title {
+  margin-top: 10px !important;
+  margin-bottom: 12px !important;
+  padding-bottom: 8px !important;
+}
+body#index .bbike-carousel {
+  margin-top: 0 !important;
+}
+/* Also tighten all homepage sections */
+body#index .bbike-homepage > section {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+
+/* ========================================
+   ALL HOMEPAGE TITLES - Proxima Nova, left aligned
+   ======================================== */
+body#index .bbike-section-title,
+body#index .bbike-main-title h1,
+body#index h2.bbike-section-title,
+body#index .featured-products .products-section-title,
+body#index .product-accessories .products-section-title {
+  font-family: 'Proxima Nova', sans-serif !important;
+  font-weight: 800 !important;
+  font-style: italic !important;
+  text-transform: uppercase !important;
+  text-align: left !important;
+  letter-spacing: 1px !important;
+  color: #1b2a4a !important;
+  font-size: 22px !important;
+}
+
+
+.product-miniature .thumbnail-container,
+.product-miniature .thumbnail-inner {
+  max-height: 250px !important;
+  padding: 25px 30px !important; box-sizing: content-box !important;
+  overflow: hidden;
+}
+.product-miniature .product-thumbnail img {
+  max-height: 200px !important;
+  width: auto !important;
+  object-fit: contain !important;
+}
+
+
+
+
+
+
+
+
+/* ========================================
+   REVIEWS CAROUSEL - Trustpilot style
+   ======================================== */
+.bbike-reviews {
+  padding: 30px 0 20px !important;
+}
+
+.bbike-reviews-carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bbike-reviews-carousel__track {
+  display: flex;
+  gap: 16px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  flex: 1;
+}
+
+.bbike-review-card {
+  flex: 0 0 calc(25% - 12px);
+  min-width: calc(25% - 12px);
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.bbike-review-card__header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.bbike-review-card__stars {
+  font-size: 20px;
+  color: #1b2a4a;
+  letter-spacing: 1px;
+}
+
+.bbike-review-card__score {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1b2a4a;
+}
+
+.bbike-review-card__text {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.4;
+  margin-bottom: 12px;
+  flex: 1;
+}
+
+.bbike-review-card__meta {
+  font-size: 11px;
+  color: #888;
+  line-height: 1.4;
+}
+.bbike-review-card__meta strong {
+  color: #333;
+}
+
+.bbike-reviews-carousel__arrow {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  color: #1b2a4a;
+  flex-shrink: 0;
+}
+.bbike-reviews-carousel__arrow i {
+  font-size: 32px;
+}
+.bbike-reviews-carousel__arrow:hover {
+  color: #FDAF4E;
+}
+
+.bbike-reviews-carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+.bbike-reviews-carousel__dots .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.bbike-reviews-carousel__dots .dot.active {
+  background: #1b2a4a;
+}
+
+@media (max-width: 991px) {
+  .bbike-review-card {
+    flex: 0 0 calc(33.333% - 11px);
+    min-width: calc(33.333% - 11px);
+  }
+}
+@media (max-width: 575px) {
+  .bbike-review-card {
+    flex: 0 0 calc(100% - 0px);
+    min-width: calc(100% - 0px);
+  }
+}
+
+
+/* ========================================
+   BRANDS SECTION - Logo row
+   ======================================== */
+.bbike-brands {
+  padding: 25px 0 30px !important;
+}
+
+.bbike-brands__row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.bbike-brands__item {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s;
+}
+
+.bbike-brands__item:hover {
+  opacity: 0.7;
+}
+
+.bbike-brands__item img {
+  max-height: 60px;
+  max-width: 140px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(0%);
+  transition: filter 0.2s;
+}
+
+@media (max-width: 575px) {
+  .bbike-brands__row {
+    gap: 20px;
+  }
+  .bbike-brands__item img {
+    max-height: 45px;
+    max-width: 100px;
+  }
+}
+
+
+/* ========================================
+   SEO TEXT SECTION
+   ======================================== */
+.bbike-seo-text {
+  padding: 30px 0 40px !important;
+  border-top: 1px solid #eee;
+}
+
+.bbike-seo-text__title {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  font-style: normal !important;
+  text-transform: none !important;
+  color: #1b2a4a !important;
+  margin-bottom: 16px !important;
+}
+
+.bbike-seo-text__content p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.bbike-seo-text__content strong {
+  color: #333;
+}
+
+
+/* ========================================
+   BOTTOM REASSURANCE (pre-footer)
+   ======================================== */
+.bbike-bottom-reas {
+  padding: 35px 0 35px !important;
+  border-top: 1px solid #eee;
+}
+
+.bbike-bottom-reas__row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+}
+
+.bbike-bottom-reas__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  gap: 6px;
+}
+
+.bbike-bottom-reas__icon {
+  margin-bottom: 6px;
+}
+
+.bbike-bottom-reas__item strong {
+  font-size: 13px;
+  font-weight: 800;
+  color: #1b2a4a;
+  font-style: italic;
+  letter-spacing: 0.3px;
+}
+
+.bbike-bottom-reas__item span {
+  font-size: 12px;
+  color: #888;
+}
+
+@media (max-width: 991px) {
+  .bbike-bottom-reas__row {
+    flex-wrap: wrap;
+    gap: 25px;
+  }
+  .bbike-bottom-reas__item {
+    flex: 0 0 calc(50% - 25px);
+  }
+}
+
+@media (max-width: 575px) {
+  .bbike-bottom-reas__item {
+    flex: 0 0 100%;
+  }
+}
+
+
+/* ========================================
+   NEWSLETTER BAR
+   ======================================== */
+.bbike-newsletter {
+  padding: 20px 0 !important;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.bbike-newsletter__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bbike-newsletter__left {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.bbike-newsletter__brand {
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  font-style: italic;
+  color: #1b2a4a;
+  line-height: 1.1;
+}
+
+.bbike-newsletter__brand em {
+  color: #FDAF4E;
+  font-style: italic;
+}
+
+.bbike-newsletter__subtitle {
+  font-size: 11px;
+  font-weight: 700;
+  font-style: italic;
+  color: #1b2a4a;
+  letter-spacing: 0.5px;
+}
+
+.bbike-newsletter__form {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex: 1;
+  max-width: 400px;
+}
+
+.bbike-newsletter__form input[type="email"] {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 0;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+}
+
+.bbike-newsletter__form input[type="email"]:focus {
+  border-color: #1b2a4a;
+}
+
+.bbike-newsletter__btn {
+  padding: 12px 24px;
+  background: #1b2a4a;
+  color: #fff;
+  border: none;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.bbike-newsletter__btn:hover {
+  background: #FDAF4E;
+}
+
+.bbike-newsletter__right {
+  flex-shrink: 0;
+  max-width: 280px;
+}
+
+.bbike-newsletter__right p {
+  font-size: 11px;
+  color: #888;
+  line-height: 1.4;
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .bbike-newsletter__inner {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .bbike-newsletter__form {
+    max-width: 100%;
+    flex: 0 0 100%;
+    order: 3;
+  }
+  .bbike-newsletter__right {
+    max-width: 100%;
+    order: 4;
+  }
+}
+
+
+/* ========================================
+   FOOTER - Fitadium style (navy)
+   ======================================== */
+#footer {
+  padding: 0 !important;
+}
+
+.bbike-footer__main {
+  background: #071D49;
+  padding: 50px 20px 40px;
+}
+
+.bbike-footer__inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bbike-footer__logo {
+  flex: 0 0 auto;
+}
+.bbike-footer__logo img {
+  max-height: 50px;
+  width: auto;
+  filter: brightness(0) invert(1);
+}
+
+.bbike-footer__col {
+  flex: 1;
+}
+
+.bbike-footer__title {
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  font-style: italic;
+  color: #fff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.bbike-footer__title-bar {
+  display: block;
+  width: 30px;
+  height: 2px;
+  background: #FDAF4E;
+  margin-top: 8px;
+}
+
+.bbike-footer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bbike-footer__list li {
+  margin-bottom: 8px;
+}
+
+.bbike-footer__list li a {
+  color: #b0bec5;
+  font-size: 13px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.bbike-footer__list li a:hover {
+  color: #FDAF4E;
+}
+
+/* Bottom bar */
+.bbike-footer__bottom {
+  background: #05153a;
+  padding: 25px 20px;
+}
+
+.bbike-footer__bottom .bbike-footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bbike-footer__social {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.bbike-footer__social-title {
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  font-style: italic;
+  color: #fff;
+}
+
+.bbike-footer__social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.bbike-footer__social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #FDAF4E;
+  transition: background 0.2s;
+}
+
+.bbike-footer__social-icon:hover {
+  background: rgba(253, 175, 78, 0.15);
+}
+
+.bbike-footer__payments {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.bbike-footer__payments-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #b0bec5;
+  letter-spacing: 0.5px;
+}
+
+/* Copyright */
+.bbike-footer__copy {
+  background: #041232;
+  padding: 12px 20px;
+  text-align: center;
+}
+
+.bbike-footer__copy p {
+  margin: 0;
+  font-size: 12px;
+  color: #607d8b;
+}
+
+/* Hide default PS footer styling */
+.footer-container {
+  display: none !important;
+}
+
+@media (max-width: 991px) {
+  .bbike-footer__inner {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .bbike-footer__logo {
+    flex: 0 0 100%;
+    text-align: center;
+  }
+  .bbike-footer__col {
+    flex: 0 0 calc(33% - 20px);
+  }
+  .bbike-footer__bottom .bbike-footer__inner {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .bbike-footer__social {
+    align-items: center;
+  }
+}
+
+@media (max-width: 575px) {
+  .bbike-footer__col {
+    flex: 0 0 100%;
+  }
+}
+
+
+/* ========================================
+   AUTH PAGE - Two columns (Fitadium style)
+   ======================================== */
+.bbike-auth {
+  display: flex;
+  gap: 0;
+  max-width: 900px;
+  margin: 30px auto;
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bbike-auth__login,
+.bbike-auth__register {
+  flex: 1;
+  padding: 40px 35px;
+}
+
+.bbike-auth__sep {
+  width: 1px;
+  background: #eee;
+  flex-shrink: 0;
+}
+
+.bbike-auth__title {
+  font-family: 'Proxima Nova', sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 800 !important;
+  font-style: italic !important;
+  color: #1b2a4a !important;
+  text-transform: uppercase !important;
+  margin-bottom: 8px !important;
+}
+
+.bbike-auth__subtitle {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 24px;
+}
+
+/* Login form styling */
+.bbike-auth__login .login-form .form-group {
+  margin-bottom: 16px;
+}
+
+.bbike-auth__login .login-form .form-control {
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.bbike-auth__login .login-form .form-control:focus {
+  border-color: #1b2a4a;
+  outline: none;
+}
+
+.bbike-auth__login .login-form .btn-primary,
+.bbike-auth__login .login-form #submit-login {
+  width: 100%;
+  padding: 14px;
+  background: #1b2a4a !important;
+  border: none !important;
+  border-radius: 4px !important;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #fff !important;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.bbike-auth__login .login-form .btn-primary:hover,
+.bbike-auth__login .login-form #submit-login:hover {
+  background: #FDAF4E !important;
+}
+
+.bbike-auth__login .forgot-password {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.bbike-auth__login .forgot-password a {
+  font-size: 13px;
+  color: #1b2a4a;
+}
+
+/* Register side */
+.bbike-auth__benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px;
+}
+
+.bbike-auth__benefits li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #f5f5f5;
+  font-size: 14px;
+  color: #333;
+}
+
+.bbike-auth__benefits li:last-child {
+  border-bottom: none;
+}
+
+.bbike-auth__benefits li svg {
+  flex-shrink: 0;
+}
+
+.bbike-auth__create-btn {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: #FDAF4E;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.bbike-auth__create-btn:hover {
+  background: #1b2a4a;
+  color: #fff;
+}
+
+/* Hide default PS auth styling */
+.page-authentication .page-content {
+  max-width: 100% !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+.page-authentication .no-account {
+  display: none !important;
+}
+
+@media (max-width: 767px) {
+  .bbike-auth {
+    flex-direction: column;
+  }
+  .bbike-auth__sep {
+    width: 100%;
+    height: 1px;
+  }
+  .bbike-auth__login,
+  .bbike-auth__register {
+    padding: 25px 20px;
+  }
+}
+
+
+/* Align auth columns: buttons at bottom */
+.bbike-auth__login,
+.bbike-auth__register {
+  display: flex;
+  flex-direction: column;
+}
+
+.bbike-auth__login .login-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.bbike-auth__login .login-form form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.bbike-auth__login .login-form .form-footer,
+.bbike-auth__login .login-form button[type="submit"],
+.bbike-auth__login .login-form #submit-login {
+  margin-top: auto;
+}
+
+.bbike-auth__register .bbike-auth__benefits {
+  flex: 1;
+}
+
+.bbike-auth__create-btn {
+  margin-top: auto;
+}
+
+
+/* Same height for auth buttons */
+.bbike-auth__login .login-form .btn-primary,
+.bbike-auth__login .login-form #submit-login,
+.bbike-auth__create-btn {
+  height: 50px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 14px !important;
+  box-sizing: border-box !important;
+}
+
+
+/* ========================================
+   REGISTER PAGE
+   ======================================== */
+.bbike-register {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 40px 35px;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.bbike-register__title {
+  font-family: 'Proxima Nova', sans-serif !important;
+  font-size: 24px !important;
+  font-weight: 800 !important;
+  font-style: italic !important;
+  color: #1b2a4a !important;
+  text-transform: uppercase !important;
+  margin-bottom: 10px !important;
+}
+
+.bbike-register__back {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 30px;
+}
+
+.bbike-register__back a {
+  color: #1b2a4a;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.bbike-register__form .form-group {
+  margin-bottom: 16px;
+}
+
+.bbike-register__form .form-control {
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.bbike-register__form .form-control:focus {
+  border-color: #1b2a4a;
+  outline: none;
+}
+
+.bbike-register__form .form-control-label {
+  font-weight: 700;
+  font-size: 14px;
+  color: #1b2a4a;
+}
+
+.bbike-register__form .btn-primary,
+.bbike-register__form [data-link-action="save-customer"] {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #fdc830, #f7971e) !important;
+  border: none !important;
+  border-radius: 4px !important;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #333 !important;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.bbike-register__form .btn-primary:hover,
+.bbike-register__form [data-link-action="save-customer"]:hover {
+  opacity: 0.9;
+}
+
+/* Hide default PS registration page styling */
+.page-registration .page-content {
+  max-width: 100% !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+
+
+
+
+
+
+
+
+/* Register: only hide partner offers optin */
+.page-registration .form-group:has(input[name="optin"]),
+.bbike-register__form .form-group:has(input[name="optin"]) {
+  display: none !important;
+}
+
+
+/* Hide GDPR long text but keep the checkbox label */
+.page-registration label[for="field-psgdpr"] br,
+.page-registration label[for="field-psgdpr"] em,
+.bbike-register__form label[for="field-psgdpr"] br,
+.bbike-register__form label[for="field-psgdpr"] em {
+  display: none !important;
+}
+
+
+/* Style customer_privacy as opt-out notice */
+.page-registration label[for="field-customer-privacy"] em,
+.bbike-register__form label[for="field-customer-privacy"] em,
+label[for="field-customer_privacy"] em {
+  display: none !important;
+}
+label[for="field-customer_privacy"] br {
+  display: none !important;
+}
+
+
+/* ========================================
+   REGISTER FORM - Wide fields, labels on top, eye icon
+   ======================================== */
+
+/* Labels on top (not side) */
+.bbike-register__form .form-group {
+  display: flex !important;
+  flex-direction: column !important;
+  margin-bottom: 20px !important;
+}
+
+.bbike-register__form .form-control-label {
+  text-align: left !important;
+  padding: 0 0 6px 0 !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  color: #1b2a4a !important;
+  width: 100% !important;
+}
+
+/* Full width fields */
+.bbike-register__form .form-control {
+  width: 100% !important;
+  padding: 14px 16px !important;
+  border: 1px solid #ccc !important;
+  border-radius: 4px !important;
+  font-size: 14px !important;
+  background: #fff !important;
+}
+
+.bbike-register__form .form-control:focus {
+  border-color: #1b2a4a !important;
+  outline: none !important;
+}
+
+/* Remove the col-md-* layout */
+.bbike-register__form .form-group .col-md-6,
+.bbike-register__form .form-group .col-md-7,
+.bbike-register__form .form-group .col-md-3,
+.bbike-register__form .form-group [class*="col-"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  flex: 0 0 100% !important;
+  padding: 0 !important;
+}
+
+/* Password field: hide ugly "Afficher" button, show eye icon */
+.bbike-register__form .input-group {
+  position: relative !important;
+  width: 100% !important;
+  display: flex !important;
+}
+
+.bbike-register__form .input-group .form-control {
+  padding-right: 50px !important;
+}
+
+
+
+/* Password hint */
+.bbike-register__form .form-control-comment {
+  font-size: 12px !important;
+  color: #999 !important;
+  padding: 4px 0 0 !important;
+}
+
+/* Wider register container */
+.bbike-register {
+  max-width: 520px !important;
+}
+
+/* Button */
+.bbike-register__form .form-footer {
+  margin-top: 10px;
+}
+
+/* Also fix login form same way */
+.bbike-auth__login .form-group {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.bbike-auth__login .form-control-label {
+  text-align: left !important;
+  padding: 0 0 6px 0 !important;
+  font-weight: 700 !important;
+  color: #1b2a4a !important;
+  width: 100% !important;
+}
+
+.bbike-auth__login .form-group [class*="col-"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  flex: 0 0 100% !important;
+  padding: 0 !important;
+}
+
+
+
+
+
+/* Hide password strength hints only (not the field itself) */
+.page-registration .form-control-comment,
+.page-registration .password-strength-feedback,
+.page-registration div[class*="password-popover"],
+.page-registration .password-requirements-list,
+.page-registration ul.password-requirements,
+.page-registration .input-group + .form-control-comment {
+  display: none !important;
+}
+
+
+
+
+
+
+
+
+
+/* Password toggle eye icon */
+.bbike-pw-toggle {
+  font-size: 0 !important;
+  color: transparent !important;
+  width: 44px !important;
+  min-width: 44px !important;
+  padding: 0 !important;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z'/%3E%3Ccircle cx='12' cy='12' r='3'/%3E%3C/svg%3E") no-repeat center center !important;
+  background-color: #f6f6f6 !important;
+  border: 1px solid rgba(0,0,0,0.25) !important;
+  border-left: none !important;
+  cursor: pointer !important;
+}
+
+
+/* ========================================
+   PASSWORD RESET PAGE
+   ======================================== */
+.bbike-password-reset {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 40px 35px;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.bbike-password-reset__title {
+  font-family: 'Proxima Nova', sans-serif !important;
+  font-size: 24px !important;
+  font-weight: 800 !important;
+  font-style: italic !important;
+  color: #1b2a4a !important;
+  text-transform: uppercase !important;
+  margin-bottom: 20px !important;
+}
+
+.bbike-password-reset__info {
+  background: #e8f4f8;
+  border-left: 4px solid #1b2a4a;
+  padding: 14px 18px;
+  margin-bottom: 24px;
+  border-radius: 2px;
+}
+
+.bbike-password-reset__info p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.bbike-password-reset__field {
+  margin-bottom: 20px;
+}
+
+.bbike-password-reset__field label {
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  color: #1b2a4a;
+  margin-bottom: 6px;
+}
+
+.bbike-password-reset__field .form-control {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.bbike-password-reset__btn {
+  display: block;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(to bottom, #fdc830, #f7971e);
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #333;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.bbike-password-reset__btn:hover {
+  opacity: 0.9;
+}
+
+.bbike-password-reset__back {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: #1b2a4a;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.bbike-password-reset__back:hover {
+  text-decoration: underline;
+}
+
+/* Hide default PS password page styles */
+.page-password .page-content {
+  max-width: 100% !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+
+
+
+
+/* ========================================
+   HEADER ICONS - Fitadium style
+   ======================================== */
+
+
+/* Search bar */
+.bbike-search-col .search-widget input[type="text"] {
+  background: #fff !important;
+  border: 1px solid #bbb !important;
+  border-radius: 25px !important;
+}
+
+/* === Account + Cart: icon above, text below === */
+#bbike-header-account {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 30px !important;
+}
+
+/* User info: Mon compte */
+#bbike-header-account .user-info a {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-decoration: none !important;
+  color: #1b2a4a !important;
+  gap: 4px !important;
+}
+
+#bbike-header-account .user-info a i.material-icons {
+  font-size: 0 !important;
+  width: 32px;
+  height: 32px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='none' stroke='%231b2a4a' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'/%3E%3Ccircle cx='12' cy='7' r='4'/%3E%3C/svg%3E") no-repeat center center;
+}
+
+#bbike-header-account .user-info a span {
+  font-size: 11px !important;
+  font-weight: 600 !important;
+}
+
+/* Cart: Mon panier */
+#bbike-header-account .blockcart {
+  background: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#bbike-header-account .blockcart .header {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 4px !important;
+  cursor: pointer;
+}
+
+#bbike-header-account .blockcart .header i.material-icons {
+  font-size: 0 !important;
+  width: 32px;
+  height: 32px;
+  position: relative;
+  display: block !important;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='none' stroke='%231b2a4a' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='9' cy='21' r='1'/%3E%3Ccircle cx='20' cy='21' r='1'/%3E%3Cpath d='M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6'/%3E%3C/svg%3E") no-repeat center center;
+}
+
+#bbike-header-account .blockcart .header span.hidden-sm-down {
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  color: #1b2a4a !important;
+}
+
+/* Cart count badge */
+#bbike-header-account .blockcart .cart-products-count {
+  position: absolute !important;
+  top: -6px;
+  right: -8px;
+  background: #FDAF4E;
+  color: #fff;
+  font-size: 10px !important;
+  font-weight: 700;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* Hover effects */
+#bbike-header-account .user-info a:hover i.material-icons {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='none' stroke='%23FDAF4E' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'/%3E%3Ccircle cx='12' cy='7' r='4'/%3E%3C/svg%3E");
+}
+#bbike-header-account .user-info a:hover span { color: #FDAF4E !important; }
+
+#bbike-header-account .blockcart:hover .header i.material-icons {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='none' stroke='%23FDAF4E' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='9' cy='21' r='1'/%3E%3Ccircle cx='20' cy='21' r='1'/%3E%3Cpath d='M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6'/%3E%3C/svg%3E");
+}
+#bbike-header-account .blockcart:hover span { color: #FDAF4E !important; }
+
+
+
+/* Fix cart: text below icon, badge on icon */
+#bbike-header-account .blockcart .header {
+  text-align: center !important;
+  position: relative;
+}
+
+#bbike-header-account .blockcart .header span.hidden-sm-down {
+  display: block !important;
+}
+
+#bbike-header-account .blockcart .cart-products-count {
+  position: absolute !important;
+  top: -4px !important;
+  right: -4px !important;
+}
+
+/* Fix: put account and cart at same baseline */
+#bbike-header-account .user-info,
+#bbike-header-account .blockcart {
+  text-align: center;
+  min-width: 60px;
+}
+
+
+/* Precise alignment: account + cart icons and text */
+#bbike-header-account {
+  align-items: stretch !important;
+}
+
+#bbike-header-account .user-info,
+#bbike-header-account .blockcart {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  min-width: 70px;
+}
+
+#bbike-header-account .user-info a,
+#bbike-header-account .blockcart .header {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  height: 100% !important;
+}
+
+/* Same icon size */
+#bbike-header-account .user-info a i.material-icons,
+#bbike-header-account .blockcart .header i.material-icons {
+  width: 32px !important;
+  height: 32px !important;
+  flex-shrink: 0;
+}
+
+/* Text always at bottom, same line */
+#bbike-header-account .user-info a span,
+#bbike-header-account .blockcart .header span.hidden-sm-down {
+  margin-top: auto !important;
+  line-height: 1 !important;
+}
+
+
+/* Force exact same height for both icon blocks */
+#bbike-header-account .user-info a,
+#bbike-header-account .blockcart .header {
+  height: 56px !important;
+}
+
+/* Icon wrapper: same size, centered */
+#bbike-header-account .user-info a i.material-icons,
+#bbike-header-account .blockcart .header i.material-icons {
+  margin-top: 0 !important;
+  margin-bottom: 4px !important;
+}
+
+/* Cart count: absolute, out of flow */
+#bbike-header-account .blockcart .cart-products-count {
+  position: absolute !important;
+  top: -4px !important;
+  right: 10px !important;
+  z-index: 2;
+}
+
+/* Hide "(0)" text rendering, only show badge */
+#bbike-header-account .blockcart .header {
+  position: relative !important;
+  overflow: visible !important;
+}
+
+
+/* ========================================
+   TOP BAR - 3 columns
+   ======================================== */
+.bbike-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.bbike-topbar__left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bbike-topbar__link {
+  color: #333 !important;
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+}
+.bbike-topbar__link:hover { text-decoration: underline; }
+
+.bbike-topbar__sep {
+  color: #ccc;
+  font-size: 11px;
+}
+
+.bbike-topbar__flag {
+  font-size: 14px;
+}
+
+.bbike-topbar__center {
+  font-size: 12px;
+  font-weight: 600;
+  font-style: italic;
+  color: #1b2a4a;
+  letter-spacing: 0.5px;
+}
+
+.bbike-topbar__right {
+  display: flex;
+  align-items: center;
+}
+
+/* Hide user-info and cart from topbar (shown in header-main) */
+.bbike-topbar__right .user-info,
+.bbike-topbar__right .blockcart {
+  display: none !important;
+}
+
+
+/* Topbar text color fix: dark text on white bg */
+.bbike-topbar,
+.bbike-topbar__center span,
+.bbike-topbar__left,
+.bbike-topbar__right {
+  color: #333 !important;
+}
+
+.bbike-topbar__center {
+  color: #333 !important;
+}
+
+.bbike-topbar__heart {
+  color: #e74c3c;
+  font-size: 14px;
+}
+
+.bbike-topbar__right {
+  gap: 12px;
+}
+
+
+/* FORCE topbar text dark on white */
+#header .header-nav .bbike-topbar,
+#header .header-nav .bbike-topbar *,
+#header .header-nav .bbike-topbar a,
+#header .header-nav .bbike-topbar span,
+.bbike-topbar,
+.bbike-topbar *,
+.bbike-topbar a,
+.bbike-topbar span {
+  color: #333 !important;
+}
+.bbike-topbar__heart {
+  color: #e74c3c !important;
+}
+.bbike-topbar__link:hover {
+  color: #1b2a4a !important;
+}
+#header .header-nav,
+#header .header-nav.bbike-header-nav {
+  background: #fff !important;
+}
+
+
+/* ========================================
+   CART MODAL - Fitadium style
+   ======================================== */
+#blockcart-modal .modal-dialog {
+  max-width: 750px !important;
+  margin: 15vh auto !important;
+}
+
+.bbike-modal-header .close {
+  font-size: 28px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 36px;
+  height: 36px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8 !important;
+  line-height: 1;
+}
+
+.bbike-modal-header .close:hover {
+  opacity: 1 !important;
+}
+
+#blockcart-modal .modal-content {
+  border-radius: 8px !important;
+  overflow: hidden;
+  border: none !important;
+}
+
+.bbike-modal-header {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px !important;
+  border-bottom: none !important;
+  background: #fff;
+}
+
+.bbike-modal-header .modal-title {
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: #1b2a4a;
+  margin: 0;
+}
+
+.bbike-modal-header .close {
+  font-size: 24px;
+  opacity: 0.6;
+}
+
+/* Shipping progress bar */
+.bbike-modal-shipping {
+  background: #e8f4f8;
+  padding: 12px 20px;
+  text-align: center;
+}
+
+.bbike-modal-shipping p {
+  margin: 0 0 8px;
+  font-size: 13px;
+  color: #333;
+}
+
+.bbike-modal-shipping__bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bbike-modal-shipping__start,
+.bbike-modal-shipping__end {
+  font-size: 12px;
+  font-weight: 700;
+  color: #1b2a4a;
+}
+
+.bbike-modal-shipping__progress {
+  flex: 1;
+  height: 6px;
+  background: #ddd;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.bbike-modal-shipping__fill {
+  width: 100%;
+  height: 100%;
+  background: #1b2a4a;
+  border-radius: 3px;
+}
+
+/* Product info */
+.bbike-modal-body {
+  padding: 20px !important;
+}
+
+.bbike-modal-product {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.bbike-modal-product__img {
+  flex: 0 0 80px;
+}
+
+.bbike-modal-product__img img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border: 1px solid #eee;
+  border-radius: 4px;
+}
+
+.bbike-modal-product__info {
+  flex: 1;
+}
+
+.bbike-modal-product__name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1b2a4a;
+  margin-bottom: 4px;
+}
+
+.bbike-modal-product__qty,
+.bbike-modal-product__attr {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 2px;
+}
+
+.bbike-modal-product__price {
+  font-size: 20px;
+  font-weight: 800;
+  color: #1b2a4a;
+  white-space: nowrap;
+}
+
+/* Buttons */
+.bbike-modal-buttons {
+  display: flex;
+  gap: 12px;
+  padding: 0 20px 20px;
+}
+
+.bbike-modal-btn {
+  flex: 1;
+  padding: 14px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+
+.bbike-modal-btn--continue {
+  background: #fff;
+  color: #FDAF4E;
+  border: 2px solid #FDAF4E;
+}
+
+.bbike-modal-btn--continue:hover {
+  background: #fff8f0;
+}
+
+.bbike-modal-btn--cart {
+  background: linear-gradient(to bottom, #fdc830, #f7971e);
+  color: #333;
+  border: none;
+}
+
+.bbike-modal-btn--cart:hover {
+  opacity: 0.9;
+  color: #333;
+}
+
+
+/* Modal header: centered title, X absolute top-right */
+.bbike-modal-header {
+  position: relative !important;
+  justify-content: center !important;
+  text-align: center;
+}
+
+.bbike-modal-header__title {
+  font-family: 'Proxima Nova', sans-serif;
+  font-size: 18px;
+  color: #1b2a4a;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  width: 100%;
+}
+
+.bbike-modal-close {
+  position: absolute !important;
+  top: 14px !important;
+  right: 16px !important;
+  font-size: 28px !important;
+  opacity: 0.6 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.bbike-modal-close:hover { opacity: 1 !important; }
+
+/* Shipping box: rounded, inside padding */
+.bbike-modal-shipping {
+  padding: 0 20px !important;
+  background: none !important;
+}
+
+.bbike-modal-shipping__box {
+  background: #e8f4f8;
+  border-radius: 8px;
+  padding: 12px 16px;
+  text-align: center;
+}
+
+/* Product total price (subtotal, not unit) */
+.bbike-modal-product__total {
+  font-size: 22px;
+  font-weight: 800;
+  color: #1b2a4a;
+  white-space: nowrap;
+}
+
+
+/* Fix modal centering + close button + shipping pill */
+#blockcart-modal .modal-content {
+  position: relative !important;
+}
+
+.bbike-modal-close {
+  position: absolute !important;
+  top: 12px !important;
+  right: 12px !important;
+  z-index: 10 !important;
+}
+
+/* Shipping: pill style */
+.bbike-modal-shipping__box {
+  background: #edf5f8 !important;
+  border-radius: 25px !important;
+  padding: 10px 24px !important;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.bbike-modal-shipping {
+  text-align: center !important;
+  padding: 10px 20px !important;
+}
+
+.bbike-modal-shipping__box p {
+  margin-bottom: 6px !important;
+  font-size: 13px;
+}
+
+/* Fix title centering */
+.bbike-modal-header__title {
+  margin: 0 auto !important;
+  padding-right: 40px;
 }

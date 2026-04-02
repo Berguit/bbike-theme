@@ -115,3 +115,80 @@ document.addEventListener('DOMContentLoaded', function () {
   } // capture phase
 
 });
+
+
+// Reviews carousel
+(function() {
+  var track = document.querySelector('.bbike-reviews-carousel__track');
+  if (!track) return;
+  var cards = track.querySelectorAll('.bbike-review-card');
+  var prevBtn = document.querySelector('.bbike-reviews-carousel__arrow--prev');
+  var nextBtn = document.querySelector('.bbike-reviews-carousel__arrow--next');
+  var dotsContainer = document.getElementById('bbike-reviews-dots');
+  
+  var cardsPerView = 4;
+  var totalPages = Math.ceil(cards.length / cardsPerView);
+  var currentPage = 0;
+  
+  // Create dots
+  for (var i = 0; i < totalPages; i++) {
+    var dot = document.createElement('span');
+    dot.className = 'dot' + (i === 0 ? ' active' : '');
+    dot.dataset.page = i;
+    dot.addEventListener('click', function() {
+      goToPage(parseInt(this.dataset.page));
+    });
+    dotsContainer.appendChild(dot);
+  }
+  
+  function goToPage(page) {
+    currentPage = page;
+    var cardWidth = cards[0].offsetWidth + 16; // gap
+    track.scrollLeft = page * cardsPerView * cardWidth;
+    updateDots();
+  }
+  
+  function updateDots() {
+    var dots = dotsContainer.querySelectorAll('.dot');
+    dots.forEach(function(d, i) {
+      d.classList.toggle('active', i === currentPage);
+    });
+  }
+  
+  prevBtn.addEventListener('click', function() {
+    if (currentPage > 0) goToPage(currentPage - 1);
+  });
+  
+  nextBtn.addEventListener('click', function() {
+    if (currentPage < totalPages - 1) goToPage(currentPage + 1);
+  });
+})();
+
+
+(function() {
+  var labels = document.querySelectorAll('label[for="field-customer_privacy"]');
+  labels.forEach(function(label) {
+    var input = label.querySelector('input');
+    var span = label.querySelector('span');
+    if (input) {
+      input.removeAttribute('required');
+    }
+    // Remove all text nodes and em
+    var nodes = label.childNodes;
+    for (var i = nodes.length - 1; i >= 0; i--) {
+      if (nodes[i].nodeType === 3 || nodes[i].tagName === 'EM' || nodes[i].tagName === 'BR') {
+        label.removeChild(nodes[i]);
+      }
+    }
+    // Add new text
+    var newText = document.createTextNode(' Tu peux te d\u00e9sinscrire \u00e0 tout moment. Tu trouveras pour cela nos informations de contact dans les conditions d\u2019utilisation du site.');
+    var italic = document.createElement('em');
+    italic.style.fontStyle = 'italic';
+    italic.style.color = '#1b2a4a';
+    italic.style.fontSize = '13px';
+    italic.appendChild(newText);
+    label.appendChild(italic);
+  });
+})();
+
+
